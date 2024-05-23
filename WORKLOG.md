@@ -11,12 +11,14 @@ info
 info
 
 
-## GROUP MEMBER 2
+## Eric Wu
 
-### date x
+### 5/22/24
 
-info
+Setting up repo/files - class
 
-### date y
+Researching code obfuscation in competitions (ioccc) - home
+
+### 5/23/24
 
 info
