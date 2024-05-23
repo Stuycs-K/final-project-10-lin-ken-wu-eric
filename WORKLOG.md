@@ -1,10 +1,11 @@
 # Work Log
 
-## GROUP MEMBER 1
+## Ken Lin
 
-### date x
+### 5/22/24
 
-info
+- Looked at the implications of obfuscating code. 
+- Research one example that we can demo which is [a spinning donut](https://www.a1k0n.net/2006/09/15/obfuscated-c-donut.html)
 
 ### date y
 
