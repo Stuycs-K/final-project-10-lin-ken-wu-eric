@@ -6,9 +6,12 @@
 
 ## Overview
 
-Our project is all about code obfuscation. In this project, we will explain why code obfuscation is important, demo different methods of code obfuscation, and create a program to obfuscate code. 
+Our project is all about code obfuscation. In this project, we will: 
+
+- Why Code Obfuscation is important 
 - Show some examples of obfuscated code and what function they serve
-- Demo a program made to obfuscate code that you input in different ways
+- Create and show a program made to obfuscate *YOUR* code into numerous different ways
+- Demo new and variations of obfuscated code. 
 
 ## Instructions
 
@@ -20,14 +23,30 @@ Our project would include "n" examples of obfuscated code that perform various f
 make compile
 ```
 
-One of the examples that we have is a donut that is spinning/rotated along an axis or two. Running the following command would bring up that animation in the terminal. 
+One of the examples that we have is a spinning donut. Running the following command would bring up that animation in the terminal. 
+
+```
+make donut
+```
+
+### Programs
+
+### Demos
+
+There are "n" demos that we have created. Some of them are new, while others uses the preexisting code from the examples as a template. These demos are also written in C, so you would need to compile them first. 
+
+```
+make compile
+```
+
+One of the examples is the donut code. We modify the code from the example in order to perform another function. Running the following command would bring up that animation. 
 
 ```
 make donut
 ```
 
 > [!NOTE]
-> Running `CTRL + C` would exit all of the executable files. 
+> Some files are executable with some being an infinite loop. Running `CTRL + C` would exit all of the executable files. Other files would write new files. 
 
-### Programs
-### Demos
+> [!WARNING]
+> You need to have GCC (GNU Compiler Collection) which allows you to compile the C code. This is required for all out code to run. 
