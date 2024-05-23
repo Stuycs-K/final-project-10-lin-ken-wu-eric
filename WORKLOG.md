@@ -7,10 +7,12 @@
 - Looked at the implications of obfuscating code. 
 - Research one example that we can demo which is [a spinning donut](https://www.a1k0n.net/2006/09/15/obfuscated-c-donut.html)
 
-### date y
+### 5/23/24
 
-info
-
+- Added the original donut.c into the examples directory. 
+- Started on working on a variation of donut.c in the demos directory. (Not Sure if its fully functional)
+- Added the makefile commands in order to compile and run files in demos and examples directory. 
+- Added information into README
 
 ## Eric Wu
 
