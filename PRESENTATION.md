@@ -14,9 +14,11 @@ HOWEVER, it is important to note that code obfuscation does not help increase th
 
 #### What are the different methods you can use to obfuscate code? 
 
+There are so many ways to make your code unreadable, complex, and hard to understand. 
+
 One way is by renaming all of your variables, function names, and parameters to single letters instead of their intended use. This will make your code harder to understand if there are no good naming conventions. 
 
-(add more 
+Removing whitespace is one of the easiest ways to make code harder to understand. However, some coding languages may prevent the full ability of this. In python, indentations are necessary to actually make code function. 
 
 #### Examples:
 
