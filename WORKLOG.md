@@ -18,10 +18,9 @@
 
 ### 5/22/24
 
-Setting up repo/files - class
-
-Researching code obfuscation in competitions (ioccc) - home
+- Setting up repo/files - class
+- Researching code obfuscation in competitions (ioccc) - home
 
 ### 5/23/24
 
-info
+- Started writing up the presentation slides - class 
