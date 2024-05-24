@@ -14,6 +14,11 @@
 - Added the makefile commands in order to compile and run files in demos and examples directory. 
 - Added information into README
 
+### 5/24/24
+
+- Added the speed x and speed z variable to donut.c demo to control spinning speed. Doesn't work, so left it to Eric to debug. 
+- Trying to fix + add to Eric's early stages of obfuscate.py
+
 ## Eric Wu
 
 ### 5/22/24
