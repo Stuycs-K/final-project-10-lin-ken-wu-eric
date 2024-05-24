@@ -14,5 +14,8 @@ HOWEVER, it is important to note that code obfuscation does not help increase th
 
 What are the different methods you can use to obfuscate code? 
 
+One way is by renaming all of your variables, function names, and parameters to single letters instead of their intended use. This will make your code harder to understand if there are no good naming conventions. 
+
 Examples:
 
+In the donut example shown in donut.c, the code is shaped in a donut. If someone just took the code and saw it in the donut shape, it'd take longer to piece together because of the difference in whitespace. 
