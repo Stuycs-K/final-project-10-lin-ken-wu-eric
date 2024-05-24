@@ -23,4 +23,5 @@
 
 ### 5/23/24
 
-- Started writing up the presentation slides - class 
+- Started writing up the presentation slides - class & home
+- Set up our python file a little - home
