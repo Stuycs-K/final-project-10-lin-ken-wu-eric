@@ -6,8 +6,10 @@ k;
 double sin(), cos();
 
 int main(int argc, char* argv[]) {
-    float speed_x = atoi(argv[1]);
-    float speed_z = atoi(argv[2]);
+    char * speedx = argv[1];
+    char * speedz = argv[2];
+    int speed_x = atoi(speedx);
+    int speed_z = atoi(speedz);
     float A = 0, B = 0, i, j, z[1760];
     char b[1760];
     for (;;) {
@@ -27,7 +29,7 @@ int main(int argc, char* argv[]) {
             }
         printf("\x1b[H");
         for (int k = 0; 1761 > k; k++) putchar(k % 80 ? b[k] : 10);
-        A += 0.02 * speed_x;
-        B += 0.01 * speed_z;
+        A += 0.01 * speed_x;
+        B += 0.005 * speed_z;
     }
 }
