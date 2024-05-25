@@ -16,8 +16,15 @@
 
 ### 5/24/24
 
-- Added the speed x and speed z variable to donut.c demo to control spinning speed. Doesn't work, so left it to Eric to debug. 
-- Trying to fix + add to Eric's early stages of obfuscate.py
+- Added the speed x and speed z variable to donut.c demo to control spinning speed. 
+- Tried to add it to the makefile terminal command, but it didn't work. Eric will try to get it working. 
+- Fixed Eric's obfuscate.py which didn't copy over the first line of the input file and keeping whitespace. 
+- Researched some more obfuscation programs we can run
+    - Comments/Docs Stripping
+    - Name Mangling
+    - Trash Code Insertion
+
+### Tmr 
 
 ## Eric Wu
 
