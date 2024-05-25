@@ -1,17 +1,17 @@
 import sys
 import re
 
-def obfuscate(args):
-  with open(args, "r") as file:
-    line = file.readline()
+fileName = sys.argv[1]
+obfuscatedFileName = "obfuscated" + fileName
+
+with open(fileName, "r") as file:
     with open(obfuscatedFileName, "w") as newFile:
-      while (line):
-        line.strip()
-        line = file.readline()
-        print(line)
-        newLine = re.search("^[A-Z]*$",line)
-        newFile.write(line)
-      
-if __name__ == "__main__":
-    args = sys.argv
-    globals()[args[1]](*args[2:])
+        for line in file: 
+          newLine = ""
+          for char in line:
+            if char.isspace():
+              newLine += char
+            else:
+               newLine += char # Temp For Obfuscating Later
+    
+          newFile.write(newLine)  
