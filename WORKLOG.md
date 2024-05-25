@@ -37,3 +37,8 @@
 
 - Started writing up the presentation slides - class & home
 - Set up our python file a little - home
+
+### 5/24/24
+
+- Continued working on obfuscation python code 
+- Fixed Ken's donut.c that had trouble turning arguments into floats with seg fault
