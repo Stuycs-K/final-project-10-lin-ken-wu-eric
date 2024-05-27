@@ -32,7 +32,7 @@
 
 - Rewrote obfuscate.py to be a obfuscate method and a main method.
 - Added trash code insertion based on randomness into the obfuscated code. 
-- Update to README's Program section regarding this. 
+- Update to README and PRESENATION regarding obfuscate.py
 
 ## Eric Wu
 
