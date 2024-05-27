@@ -26,6 +26,14 @@ In the donut example shown in donut.c, the code is shaped in a donut. If someone
 
 (add stuff later)
 
+#### Programs:
+
+##### Docstring and Comment Stripping + Trash Code Insertion
+
+Docstring and Comment Stripping makes code less readable. This is, because these features provide insight into the purpose and logic of the code. Without these, it would make it harder for hackers to deciper what you are trying to achieve. 
+
+Trash code insertion ...
+
 #### Demos:
 
 Looking at our demos, (add stuff later) 

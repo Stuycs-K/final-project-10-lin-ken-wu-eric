@@ -24,7 +24,15 @@
     - Name Mangling
     - Trash Code Insertion
 
-### Tmr 
+### 5/26/24
+
+- Added comment and docstring stripping to obfuscate.py
+
+### 5/27/24
+
+- Rewrote obfuscate.py to be a obfuscate method and a main method.
+- Added trash code insertion based on randomness into the obfuscated code. 
+- Update to README's Program section regarding this. 
 
 ## Eric Wu
 

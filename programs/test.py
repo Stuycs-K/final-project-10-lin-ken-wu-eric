@@ -1,6 +1,6 @@
 def decode(arg1, arg2):
     with open(arg1, "rb") as f:
-        cipher = f.read()
+        cipher = f.read() # read
     
         key = open(arg2)
         key = key.read()
