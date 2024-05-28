@@ -75,9 +75,13 @@ Docstring and Comment Stripping makes code less readable. This is, because these
 
 Trash code insertion ...
 
+##### Java obfuscate
+
 ## Demos:
 
 Looking at our demos, the first one is the donut. 
+
+Next, let's take a look at programs made by other people (we could use pyarmor, proguard,...)
 
 <!-- ## Our Tool:
 

@@ -50,3 +50,8 @@
 
 - Continued working on obfuscation python code 
 - Fixed Ken's donut.c that had trouble turning arguments into floats with seg fault
+
+### 5/27/24
+- Started working on the java implementation of obfuscation, there's a big error
+- Updating Presentation with examples of code and formatiing 
+- Fixing command usage error in python file
