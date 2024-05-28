@@ -19,10 +19,8 @@ def obfuscate(code):
             obfuscated_code += char
         elif char == '#':
             comment = True
-            obfuscated_code += char
         elif char == '"' and code[i - 1] != '\\':
             docstring = True
-            obfuscated_code += char
         elif char.isspace():
             obfuscated_code += char
         else:
@@ -37,21 +35,20 @@ def obfuscate(code):
 
 def main():
     if len(sys.argv) != 2:
-        print("Usage: make pyObfuscate ARGS=\"<filename>\"")
+        print('Usage: python obfuscator.py ARGS="<filename>"')
         sys.exit(1)
 
-    filename = sys.argv[1]
-    if not os.path.isfile(filename):
-        print("File not found:", filename)
+    fileName = sys.argv[1]
+    if not os.path.isfile(fileName):
+        print("File not found. Make sure PATH is correct")
         sys.exit(1)
 
-    with open(filename, "r") as file:
+    with open(fileName, "r") as file:
         code = file.read()
-        obfuscated_code = obfuscate(code)
-
-    obfuscated_filename = "obfuscated" + filename
-    with open(obfuscated_filename, "w") as new_file:
-        new_file.write(obfuscated_code)
+        obfuscatedCode = obfuscate(code)
+        obfuscatedFileName = "obfuscated" + fileName
+        with open(obfuscatedFileName, "w") as newFile:
+            newFile.write(obfuscatedCode)
 
 if __name__ == "__main__":
     main()
