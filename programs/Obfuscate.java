@@ -5,7 +5,7 @@ public class Obfuscate{
 
     public static void main(String[] args){
         if (args.length != 1){
-            System.out.println("Usage: make javaObfuscate <filename>");
+            System.out.println("Usage: make javaObfuscate ARGS=\"<filename>\"");
             return;
         }
 
@@ -20,6 +20,7 @@ public class Obfuscate{
             while (line != null){
                 writeFile.write(line);
                 writeFile.newLine();
+                line = readFile.readLine();
             } 
 
             readFile.close();
