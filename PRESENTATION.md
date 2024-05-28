@@ -28,8 +28,22 @@ Removing whitespace is one of the easiest ways to make code harder to understand
 
 ## Examples:
 
-- The primary example we will use is code in Java, for a simple savings account:
+- The primary example we will use is code in Java, for recursion:
 ```java
+public class Pol {
+    public static void main(String args[]) {
+      System.out.println(bunnyEars(4));
+    }
+    
+    public static int bunnyEars(int bunnies) {
+            if (bunnies == 0){
+                return 0;
+            }
+                return bunnyEars(bunnies - 1) + 2;
+        }
+}
+```
+<!-- ```java
 class SavingsAccount extends BankAccount {
 private double interestRate;
 private int withdrawCount;
@@ -59,13 +73,98 @@ public int getWithdrawCount() {
     return withdrawCount;
 }
 }
+``` -->
+
+First, let's change name mangle. The following result would be: 
+```java
+public class Pol {
+    public static void main(String a[]) {
+      System.out.println(b(4));
+    }
+    
+    public static int b(int i) {
+            if (i == 0){
+                return 0;
+            }
+                return b(i - 1) + 2;
+        }
+}
 ```
 
-[add the different ways this code can be edited]
+<!-- ```java
+class Ju extends Po {
+private double ab;
+private int ba;
+
+public Ju(String a, double b, double c)throws Exception {
+    super(a, b);
+    if (c <= 0)
+       throw new Exception("IkludGVyZXN0IHJhdGUgbXVzdCBiZSBncmVhdGVyIHRoYW4gMCI=");
+    this.c = c;
+}
+public void hh() throws Exception {
+    this.jk(ya() * ab);
+}
+
+public void ht(double rt) throws Exception {
+        ba++;
+        if (rt <= 0) {
+            ba--;
+            throw new Exception("QmFsYW5jZSBpcyBuZWdhdGl2ZQ==");
+        }
+        if (ba > 6)
+            throw new Exception("WW91IGhhdmUgd2l0aGRyYXduIDYgdGltZXMgYWxyZWFkeQ==");
+        super.ht(rt);
+}
+
+public int zz() {
+    return ba;
+}
+}
+``` -->
+The only problem here is that this file extends from another file, so all files would have to be obfuscated. Also, the strings were turned into base64 to throw off the hackers. 
+
+Next, let's remove all the whitespaces from this Java file.
+```java
+public class Pol { public static void main(String a[]) {System.out.println(b(4));} public static int b(int i) {if (i == 0){return 0;} else return b(i - 1) + 2;}}
+```
+
+<!-- ```java
+class Ju extends Po {private double ab; private int ba;public Ju(String a, double b, double c)throws Exception {super(a, b);if (c <= 0)throw new Exception("IkludGVyZXN0IHJhdGUgbXVzdCBiZSBncmVhdGVyIHRoYW4gMCI=");this.c = c;
+}
+
+
+public void hh() throws Exception {
+    this.jk(ya() * ab);
+}
+
+public void ht(double rt) throws Exception {
+        ba++;
+        if (rt <= 0) {
+            ba--;
+            throw new Exception("QmFsYW5jZSBpcyBuZWdhdGl2ZQ==");
+        }
+        if (ba > 6)
+            throw new Exception("WW91IGhhdmUgd2l0aGRyYXduIDYgdGltZXMgYWxyZWFkeQ==");
+        super.ht(rt);
+}
+
+public int zz() {
+    return ba;
+}
+}
+``` -->
+
+
+Although the code may be very obvious as for its function, larger projects will find obfuscation necessary. In addition, the context of the code is fully hidden.
 
 - In the donut example shown in donut.c, the code is shaped in a donut. If someone just took the code and saw it in the donut shape, it'd take longer to piece together because of the difference in whitespace. 
 
+## Demos:
 
+Looking at our demos, the first one is the donut. 
+
+Next, let's take a look at programs made by other people (we could use pyarmor, proguard,...)
 
 ## Programs:
 
@@ -76,12 +175,6 @@ Docstring and Comment Stripping makes code less readable. This is, because these
 Trash code insertion ...
 
 ##### Java obfuscate
-
-## Demos:
-
-Looking at our demos, the first one is the donut. 
-
-Next, let's take a look at programs made by other people (we could use pyarmor, proguard,...)
 
 <!-- ## Our Tool:
 
