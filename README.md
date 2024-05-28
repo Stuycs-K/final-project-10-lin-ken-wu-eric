@@ -34,7 +34,7 @@ make donut
 One of the programs that we created is a python program that obfuscate python code. This program obfuscate code using comment/docstring stripping. 
 
 ```
-pyObfuscate ARGS="test.py"
+make pyObfuscate ARGS="test.py"
 ```
 
 >[!NOTE]
