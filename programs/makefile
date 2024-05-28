@@ -2,10 +2,10 @@ pyObfuscate:
 	@python3 obfuscate.py $(ARGS)
 
 javaObfuscate:
-	@./obfuscate $(ARGS)
+	@./Obfuscate $(ARGS)
 
 compile: 
-	@javac obfuscate.java
+	@javac Obfuscate.java
 
 clean:
 	@rm -f *.o server client 2> /dev/null || true

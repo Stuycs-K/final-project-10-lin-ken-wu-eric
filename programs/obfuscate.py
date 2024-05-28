@@ -37,7 +37,7 @@ def obfuscate(code):
 
 def main():
     if len(sys.argv) != 2:
-        print("Usage: python obfuscator.py <filename>")
+        print("Usage: make pyObfuscate <filename>")
         sys.exit(1)
 
     filename = sys.argv[1]
