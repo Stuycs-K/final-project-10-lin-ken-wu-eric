@@ -37,7 +37,7 @@
 ### 5/28/24
 
 - Changed obfuscate.py to remove all traces of // and #. It didn't remove those characters before
-- Removing whitespace and obfuscating it into a donut in demos directory
+- Removing whitespace and obfuscating donut.c code into a donut. (demos directory)
 
 ## Eric Wu
 
