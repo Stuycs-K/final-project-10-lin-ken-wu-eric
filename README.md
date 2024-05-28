@@ -31,6 +31,15 @@ make donut
 
 ### Programs
 
+One of the programs that we created is a python program that obfuscate python code. This program obfuscate code using comment/docstring stripping. 
+
+```
+make pyObfuscate ARGS="test.py"
+```
+
+>[!NOTE]
+> Replace `test.py` with the name of the file you want to obfuscate. Keep in mind that the new file would have the prefix `obfuscated` + the name of your file. The obfuscated file would be unable to run. 
+
 ### Demos
 
 There are "n" demos that we have created. Some of them are new, while others uses the preexisting code from the examples as a template. These demos are also written in C, so you would need to compile them first. 

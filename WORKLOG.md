@@ -14,6 +14,26 @@
 - Added the makefile commands in order to compile and run files in demos and examples directory. 
 - Added information into README
 
+### 5/24/24
+
+- Added the speed x and speed z variable to donut.c demo to control spinning speed. 
+- Tried to add it to the makefile terminal command, but it didn't work. Eric will try to get it working. 
+- Fixed Eric's obfuscate.py which didn't copy over the first line of the input file and keeping whitespace. 
+- Researched some more obfuscation programs we can run
+    - Comments/Docs Stripping
+    - Name Mangling
+    - Trash Code Insertion
+
+### 5/26/24
+
+- Added comment and docstring stripping to obfuscate.py
+
+### 5/27/24
+
+- Rewrote obfuscate.py to be a obfuscate method and a main method.
+- Added trash code insertion based on randomness into the obfuscated code. 
+- Update to README and PRESENATION regarding obfuscate.py
+
 ## Eric Wu
 
 ### 5/22/24
@@ -25,3 +45,8 @@
 
 - Started writing up the presentation slides - class & home
 - Set up our python file a little - home
+
+### 5/24/24
+
+- Continued working on obfuscation python code 
+- Fixed Ken's donut.c that had trouble turning arguments into floats with seg fault
