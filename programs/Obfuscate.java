@@ -13,13 +13,25 @@ public class Obfuscate{
         String fileName = args[0];
         String obfuscatedFile = "obfuscated2" + fileName;
 
+        File f = new File("F:\\" + fileName)
+        if (!(f.exists())) {
+            System.out.println("File not found. Make sure PATH is correct")
+            return;
+        }
+
         try{
             BufferedReader readFile = new BufferedReader(new FileReader(fileName));
             BufferedWriter writeFile = new BufferedWriter(new FileWriter(obfuscatedFile));
 
             String line = readFile.readLine();
-            while (line != null){
-                writeFile.write(obfuscate(line));
+            while (line != null) {
+                String obfuscated_code = "";
+                boolean comment = False;
+
+                for (int i = 0; i < line.length(); i ++) {
+                }
+
+                writeFile.write(obfuscate(obfuscated_code));
                 line = readFile.readLine();
             } 
 
