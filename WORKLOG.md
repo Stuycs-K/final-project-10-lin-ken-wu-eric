@@ -60,3 +60,7 @@
 - Started working on the java implementation of obfuscation, there's a big error
 - Updating Presentation with examples of code and formatiing 
 - Fixing command usage error in python file
+
+### 5/28/24
+- Worked on Java obfuscate code, couldn't get it to work because of taking every line, not each word, checking for Java keywords
+- Worked a lot on presentation and adding example into it
