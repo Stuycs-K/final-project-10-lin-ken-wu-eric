@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.*;
+import java.util.regex.*;
 
 public class Obfuscate{
 
@@ -10,7 +11,7 @@ public class Obfuscate{
         }
 
         String fileName = args[0];
-        String obfuscatedFile = "obfuscated" + fileName;
+        String obfuscatedFile = "obfuscated2" + fileName;
 
         try{
             BufferedReader readFile = new BufferedReader(new FileReader(fileName));
@@ -33,8 +34,13 @@ public class Obfuscate{
     }
 
     public static String obfuscate(String str){
-        String newString;
-        return str;
+        String newString = "";
+        Pattern varFinder = Pattern.compile("\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b");
+        Matcher match = varFinder.matcher("as");
+        if (match.matches()){
+            newString = Base64.getEncoder().encodeToString(str.getBytes());
+        }
+        return newString;
     }
 
 }
