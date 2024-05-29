@@ -18,8 +18,7 @@ public class Obfuscate{
 
             String line = readFile.readLine();
             while (line != null){
-                writeFile.write(line);
-                writeFile.newLine();
+                writeFile.write(obfuscate(line));
                 line = readFile.readLine();
             } 
 
@@ -31,6 +30,11 @@ public class Obfuscate{
             e.printStackTrace();
         }
 
+    }
+
+    public static String obfuscate(String str){
+        String newString;
+        return str;
     }
 
 }
