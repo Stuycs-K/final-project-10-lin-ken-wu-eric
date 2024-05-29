@@ -13,9 +13,9 @@ public class Obfuscate{
         String fileName = args[0];
         String obfuscatedFile = "obfuscated2" + fileName;
 
-        File f = new File("F:\\" + fileName)
+        File f = new File("F:\\" + fileName);
         if (!(f.exists())) {
-            System.out.println("File not found. Make sure PATH is correct")
+            System.out.println("File not found. Make sure PATH is correct");
             return;
         }
 
@@ -26,11 +26,40 @@ public class Obfuscate{
             String line = readFile.readLine();
             while (line != null) {
                 String obfuscated_code = "";
-                boolean comment = False;
+                boolean singleComment = false;
+                boolean multipleComment = false;
+                boolean docstring = false;
 
                 for (int i = 0; i < line.length(); i ++) {
+                    char c = line.charAt(i);
+                    if (singleComment) {
+                        break;
+                    } else if (multipleComment) {
+                        if (i < line.length() - 1 && c == '*' && line.charAt(i + 1) == '/') {
+                            multipleComment = false;
+                            i++;
+                        }
+                    } else if (docstring) {
+                        if (c == '"' && (i == 0 || line.charAt(i - 1) != '\\')) {
+                            docstring = false;
+                        }
+                    } else {
+                        if (c == '/') {
+                            if (i < line.length() - 1 && line.charAt(i + 1) == '/') {
+                                singleComment = true;
+                                break;
+                            } else if (i < line.length() - 1 && line.charAt(i + 1) == '*') {
+                                multipleComment = true;
+                                i++;
+                                continue;
+                            }
+                        } else if (c == '"') {
+                            docstring = true;
+                        }
+                    }
+                    obfuscated_code += c;
                 }
-
+                
                 writeFile.write(obfuscate(obfuscated_code));
                 line = readFile.readLine();
             } 
