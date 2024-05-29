@@ -35,7 +35,7 @@ public class Obfuscate{
 
     public static String obfuscate(String str){
         String newString = "";
-        Pattern varFinder = Pattern.compile("\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b");
+        Pattern varFinder = Pattern.compile("\\b(?!print|static|String|boolean|private|void|float|double|int)([a-zA-Z_][a-zA-Z0-9_]*)\\b");
         Matcher match = varFinder.matcher("as");
         if (match.matches()){
             newString = Base64.getEncoder().encodeToString(str.getBytes());
