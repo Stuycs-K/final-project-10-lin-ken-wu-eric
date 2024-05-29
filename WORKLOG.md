@@ -39,6 +39,11 @@
 - Changed obfuscate.py to remove all traces of // and #. It didn't remove those characters before
 - Removing whitespace and obfuscating donut.c code into a donut. (demos directory)
 
+### 5/29/24
+
+- Added "File not Found" Error catching into the java program
+- Revised Eric's docstring stripping and added comment stripping (both inline and multiple lines)
+
 ## Eric Wu
 
 ### 5/22/24
