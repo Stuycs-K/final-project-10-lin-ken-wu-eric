@@ -64,3 +64,8 @@
 ### 5/28/24
 - Worked on Java obfuscate code, couldn't get it to work because of taking every line, not each word, checking for Java keywords
 - Worked a lot on presentation and adding example into it
+
+### 5/29/24
+- Worked on revising donut.c obfuscated demo (lots of errors)
+- Edited README to include how to use java program
+- Added more to presentation including obfuscated tools, finished example 
