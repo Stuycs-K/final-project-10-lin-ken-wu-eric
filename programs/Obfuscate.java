@@ -30,24 +30,25 @@ public class Obfuscate{
                 boolean multipleComment = false;
                 boolean docstring = false;
 
-                for (int i = 0; i < line.length(); i ++) {
+                for (int i = 0; i < line.length(); i++) {
                     char c = line.charAt(i);
+        
                     if (singleComment) {
-                        break;
+                        continue;
                     } else if (multipleComment) {
                         if (i < line.length() - 1 && c == '*' && line.charAt(i + 1) == '/') {
                             multipleComment = false;
                             i++;
                         }
                     } else if (docstring) {
-                        if (c == '"' && (i == 0 || line.charAt(i - 1) != '\\')) {
+                        if (c == '"' && (i == 0 || line.charAt(i - 1)!= '\\')) {
                             docstring = false;
                         }
                     } else {
                         if (c == '/') {
                             if (i < line.length() - 1 && line.charAt(i + 1) == '/') {
                                 singleComment = true;
-                                break;
+                                continue;
                             } else if (i < line.length() - 1 && line.charAt(i + 1) == '*') {
                                 multipleComment = true;
                                 i++;
@@ -55,9 +56,10 @@ public class Obfuscate{
                             }
                         } else if (c == '"') {
                             docstring = true;
+                        } else {
+                            obfuscated_code += c;
                         }
                     }
-                    obfuscated_code += c;
                 }
                 
                 writeFile.write(obfuscate(obfuscated_code));
