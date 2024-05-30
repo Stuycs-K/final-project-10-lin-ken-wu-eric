@@ -44,6 +44,11 @@
 - Added "File not Found" Error catching into the java program
 - Revised Eric's docstring stripping and added comment stripping (both inline and multiple lines)
 
+### 5/30/24
+
+- Fixed multi-line comment stripping in java program. 
+- Removed java program's ability to remove string literals
+
 ## Eric Wu
 
 ### 5/22/24

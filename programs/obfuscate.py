@@ -24,7 +24,7 @@ def obfuscate(code):
         elif char.isspace():
             obfuscated_code += char
         else:
-            obfuscated_code += chr(ord(char) + 1)
+            obfuscated_code += char 
         
         # Trash Code Insertion
         if random.random() < 0.25:
