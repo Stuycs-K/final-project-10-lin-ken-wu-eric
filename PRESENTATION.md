@@ -24,7 +24,11 @@ Removing whitespace is one of the easiest ways to make code harder to understand
 
 - Trash Code Insertion
 
-- Comments/Docs Stripping
+By inserting trash code, it adds more chaos and randomness to the logic and meaning of the code, if it can be somewhat understood. For example, adding recursive functions to code focused on the volumes of shapes is completely irrelevant.
+
+- Comments/Docstring Stripping
+
+Removing the comments in code and removing docstrings will essentially remove any insight on the logic of the code.
 
 ## Examples:
 
@@ -129,6 +133,12 @@ Next, let's remove all the whitespaces from this Java file.
 public class Pol { public static void main(String a[]) {System.out.println(b(4));} public static int b(int i) {if (i == 0){return 0;} else return b(i - 1) + 2;}}
 ```
 
+Now, let's add random code to throw the hackers off.
+
+```java
+public class Pol { public static void main(String a[]) {System.out.println(b(4));} public static double loo(double p){return p;} public static int b(int i) {if (i == 0){return 0;} else return b(i - 1) + 2;}} public static double che(double a, double b){return a * b;} public static double paw(double a, double b){ return 0.5 * a * b;} public static String aasdfjEIF(String alsdjlfIWFWJLDVNCX){String i = "lJFVIej82348"; return alsdjlfIWFWJLDVNCX + i + kwjeifaiiozI34324;}
+```
+
 <!-- ```java
 class Ju extends Po {private double ab; private int ba;public Ju(String a, double b, double c)throws Exception {super(a, b);if (c <= 0)throw new Exception("IkludGVyZXN0IHJhdGUgbXVzdCBiZSBncmVhdGVyIHRoYW4gMCI=");this.c = c;
 }
@@ -162,19 +172,27 @@ Although the code may be very obvious as for its function, larger projects will 
 
 ## Demos:
 
-Looking at our demos, the first one is the donut. 
+Looking at our demos, the first one is the donut. We added a small feature to change the speed of the rotating donut, and tried to manually obfuscate it by messing with whitespace because of the flexibility of coding in C. 
 
-Next, let's take a look at programs made by other people (we could use pyarmor, proguard,...)
+Next, let's take a look at programs made by other people.
+
+- A really simple online python obfuscator tool is [Oxyry Python Obfuscator](https://pyob.oxyry.com/). It does docstring/comment stripping and it changes the names of functions and variables to something not readable. 
 
 ## Programs:
 
-##### Docstring and Comment Stripping + Trash Code Insertion ()
+##### Python Docstring/Comment Stripping + Trash Code Insertion 
 
-Docstring and Comment Stripping makes code less readable. This is, because these features provide insight into the purpose and logic of the code. Without these, it would make it harder for hackers to deciper what you are trying to achieve. 
+Our Python program allows you to obfuscate a python file by docstring and comment stripping and inserting trash code.
 
-Trash code insertion ...
+Docstring and comment stripping makes code less readable. This is because these features provide insight into the purpose and logic of the code. Without these, it would make it harder for hackers to deciper what you are trying to achieve. 
 
-##### Java obfuscate
+Trash code insertion basically just adds random code that is literally gibberish to make the code more meaningless.
+
+##### Java Name Mangling + Comment Stripping + Removing whitespaces
+
+Our Java program allows you to obfuscate a Java file by removing newlines/whitespaces, removes comments, and name mangles.
+
+Removing newlines will make the code way less readable, removing comments removes the insight of the code, and name mangling removes the context of each function and the general code.
 
 <!-- ## Our Tool:
 
