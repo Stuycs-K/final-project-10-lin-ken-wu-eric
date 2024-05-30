@@ -31,14 +31,30 @@ make donut
 
 ### Programs
 
-One of the programs that we created is a python program that obfuscate python code. This program obfuscate code using comment/docstring stripping. 
+One of the programs that we created is a python program that obfuscate python code. This program obfuscates code using comment/docstring stripping. 
+
+To run the program:
 
 ```
 make pyObfuscate ARGS="test.py"
 ```
 
 >[!NOTE]
-> Replace `test.py` with the name of the file you want to obfuscate. Keep in mind that the new file would have the prefix `obfuscated` + the name of your file. The obfuscated file would be unable to run. 
+> Replace `test.py` with the name of the file you want to obfuscate. Keep in mind that the new file would have the prefix `obfuscated` + the name of your file. The obfuscated file would be unable to run.
+
+Another program we created is a Java program that can obfuscate Java files. This program obfuscates code using comment/docstring stripping.
+
+To run the program, you must compile the java file and then use it:
+```
+make compile
+```
+
+```
+make javaObfuscate ARGS="Test.java"
+```
+
+>[!NOTE]
+> Replace `Test.java` with the name of the file you want to obfuscate. Keep in mind that the new file would have the prefix `obfuscated` + the name of your file. The obfuscated file would be unable to run.
 
 ### Demos
 
