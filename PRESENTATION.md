@@ -174,7 +174,9 @@ Although the code may be very obvious as for its function, larger projects will 
 
 Looking at our demos, the first one is the donut. We added a small feature to change the speed of the rotating donut, and tried to manually obfuscate it by messing with whitespace because of the flexibility of coding in C. 
 
-Next, let's take a look at programs made by other people (we could use pyarmor, proguard,...)
+Next, let's take a look at programs made by other people.
+
+- A really simple online python obfuscator tool is [Oxyry Python Obfuscator](https://pyob.oxyry.com/). It does docstring/comment stripping and it changes the names of functions and variables to something not readable. 
 
 ## Programs:
 
