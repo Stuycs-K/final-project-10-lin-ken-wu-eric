@@ -135,6 +135,10 @@ public class Pol { public static void main(String a[]) {System.out.println(b(4))
 
 Now, let's add random code to throw the hackers off.
 
+```java
+public class Pol { public static void main(String a[]) {System.out.println(b(4));} public static double loo(double p){return p;} public static int b(int i) {if (i == 0){return 0;} else return b(i - 1) + 2;}} public static double che(double a, double b){return a * b;} public static double paw(double a, double b){ return 0.5 * a * b;} public static String aasdfjEIF(String alsdjlfIWFWJLDVNCX){String i = "lJFVIej82348"; return alsdjlfIWFWJLDVNCX + i + kwjeifaiiozI34324;}
+```
+
 <!-- ```java
 class Ju extends Po {private double ab; private int ba;public Ju(String a, double b, double c)throws Exception {super(a, b);if (c <= 0)throw new Exception("IkludGVyZXN0IHJhdGUgbXVzdCBiZSBncmVhdGVyIHRoYW4gMCI=");this.c = c;
 }
