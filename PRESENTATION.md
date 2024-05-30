@@ -14,7 +14,7 @@ HOWEVER, it is important to note that code obfuscation does not help increase th
 
 There are so many ways to make your code unreadable, complex, and hard to understand. 
 
-- Name Mangling
+- Removing context by changing names
 
 One way is by renaming all of your variables, function names, and parameters to single letters instead of their intended use. This will make your code harder to understand if there are no good naming conventions. 
 
@@ -34,7 +34,7 @@ Removing the comments in code and removing docstrings will essentially remove an
 
 - The primary example we will use is code in Java, for recursion:
 ```java
-public class Pol {
+public class Recursion {
     public static void main(String args[]) {
       System.out.println(bunnyEars(4));
     }
@@ -79,7 +79,7 @@ public int getWithdrawCount() {
 }
 ``` -->
 
-First, let's change name mangle. The following result would be: 
+First, let's change change some of the variable names. The following result would be: 
 ```java
 public class Pol {
     public static void main(String a[]) {
@@ -192,7 +192,7 @@ Trash code insertion basically just adds random code that is literally gibberish
 
 Our Java program allows you to obfuscate a Java file by removing newlines/whitespaces, removes comments, and name mangles.
 
-Removing newlines will make the code way less readable, removing comments removes the insight of the code, and name mangling removes the context of each function and the general code.
+Removing newlines will make the code way less readable, removing comments removes the insight of the code, and changing variable names removes the context of each function and the general code.
 
 <!-- ## Our Tool:
 

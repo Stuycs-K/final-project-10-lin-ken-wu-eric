@@ -58,16 +58,19 @@ make javaObfuscate ARGS="Test.java"
 
 ### Demos
 
-There are "n" demos that we have created. Some of them are new, while others uses the preexisting code from the examples as a template. These demos are also written in C, so you would need to compile them first. 
+There are "n" demos that we have created. Some of them are new, while others uses the preexisting code from the examples as a template. These demos are also written in C and Java, so you would need to compile them first. 
 
 ```
 make compile
 ```
 
-One of the examples is the donut code. We modify the code from the example in order to perform another function. Running the following command would bring up that animation. 
+> [!NOTE]
+> There will be warnings after compiling the C file but it doesn't affect outcome of the code at all. 
+
+One of the demos is the donut code. We modified the code from the example in order to perform another function. Running the following command would bring up that animation. You need to put two integers as arguments to change the speed.
 
 ```
-make donut
+make donut ARGS="int1 int2" 
 ```
 
 > [!NOTE]
@@ -75,3 +78,16 @@ make donut
 
 > [!WARNING]
 > You need to have GCC (GNU Compiler Collection) which allows you to compile the C code. This is required for all out code to run. 
+
+Another demo is our obfuscation of some recursion code. You have to first compile the code.
+
+```
+make compile
+```
+
+To actually run the code, enter this:
+
+```
+java (recursionFile)
+```
+
