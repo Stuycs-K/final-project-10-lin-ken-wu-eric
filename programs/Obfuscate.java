@@ -51,11 +51,15 @@ public class Obfuscate{
                     }
                 }
                 
-            
+                String trashCode = "public static void(String a, boolean b, int c){\n";
+                trashCode += "for (int i = 0; i < 100; i++){\nreturn;\n}\n";
+                trashCode += "}\n";
                 
-                System.out.print(r);
+                System.out.print(trashCode);
 
-
+                if (r % 2 == 0){
+                    writeFile.write(obfuscate(trashCode));
+                }
 
                 writeFile.write(obfuscate(obfuscated_code) + " \n");
                 line = readFile.readLine();
