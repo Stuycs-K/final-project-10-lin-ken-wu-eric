@@ -85,3 +85,4 @@
 ### 5/30/24
 - Worked on adding the examples from presentation into the demos section
 - Added more instructions to README and edited presentation
+- Worked on java obfuscation using base64 encoding, but it is very messy still but it works
