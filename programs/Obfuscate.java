@@ -50,7 +50,7 @@ public class Obfuscate{
                     }
                 }
                 
-                writeFile.write(obfuscated_code + " \n");
+                writeFile.write(obfuscate(obfuscated_code) + " \n");
                 line = readFile.readLine();
             } 
 
@@ -69,11 +69,14 @@ public class Obfuscate{
         int curIn = 0;
         Pattern varFinder = Pattern.compile("\\b(?!print|static|String|boolean|private|void|float|double|int|class|public|return|if|else|for|while|do|switch|case|default|break|continue|new|this|super|try|catch|finally|throw|throws|import|package|interface|extends|implements|abstract|final|native|strictfp|synchronized|transient|volatile|assert|enum|goto|const|instanceof|true|false|null)([a-zA-Z_][a-zA-Z0-9_]*)\\b");
         Matcher match = varFinder.matcher(str);
-        while (match.finds()){
+        while (match.find()){
             String keyWord = match.group(1);
-            String encoded = Base64.getEncoder().encodeToString(match.getBytes());
-           
+            String encoded = Base64.getEncoder().encodeToString(keyWord.getBytes());
+            newString += str.substring(curIn,match.start());
+            newString += encoded;
+            curIn = match.end();
         }
+        newString += str.substring(curIn);
         
         return newString;
     }
