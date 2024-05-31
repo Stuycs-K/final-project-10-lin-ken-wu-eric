@@ -81,3 +81,7 @@
 - Worked on revising donut.c obfuscated demo (lots of errors)
 - Edited README to include how to use java program
 - Added more to presentation including obfuscated tools, finished example 
+
+### 5/30/24
+- Worked on adding the examples from presentation into the demos section
+- Added more instructions to README and edited presentation

@@ -66,11 +66,15 @@ public class Obfuscate{
 
     public static String obfuscate(String str){
         String newString = "";
-        Pattern varFinder = Pattern.compile("\\b(?!print|static|String|boolean|private|void|float|double|int)([a-zA-Z_][a-zA-Z0-9_]*)\\b");
-        Matcher match = varFinder.matcher("as");
-        if (match.matches()){
-            newString = Base64.getEncoder().encodeToString(str.getBytes());
+        int curIn = 0;
+        Pattern varFinder = Pattern.compile("\\b(?!print|static|String|boolean|private|void|float|double|int|class|public|return|if|else|for|while|do|switch|case|default|break|continue|new|this|super|try|catch|finally|throw|throws|import|package|interface|extends|implements|abstract|final|native|strictfp|synchronized|transient|volatile|assert|enum|goto|const|instanceof|true|false|null)([a-zA-Z_][a-zA-Z0-9_]*)\\b");
+        Matcher match = varFinder.matcher(str);
+        while (match.finds()){
+            String keyWord = match.group(1);
+            String encoded = Base64.getEncoder().encodeToString(match.getBytes());
+           
         }
+        
         return newString;
     }
 
