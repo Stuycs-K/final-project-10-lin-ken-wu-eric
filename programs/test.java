@@ -3,7 +3,7 @@ public class test {
     public static void main() {
         // Test File
 
-        System.out.println("Eric is a Bozo")
+        System.out.println("Eric is a Bozo");
 
         /* Eric
             Plays
@@ -12,7 +12,7 @@ public class test {
                         Clans */
 
         for (int i = 0; i < 5; i++) {
-            System.out.println("Eric is trolling me. ")
+            System.out.println("Eric is trolling me. ");
         }
     }
 }
