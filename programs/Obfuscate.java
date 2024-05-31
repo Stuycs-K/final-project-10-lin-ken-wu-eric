@@ -50,16 +50,6 @@ public class Obfuscate{
                         }
                     }
                 }
-                
-                String trashCode = "public static void(String a, boolean b, int c){\n";
-                trashCode += "for (int i = 0; i < 100; i++){\nreturn;\n}\n";
-                trashCode += "}\n";
-                
-                System.out.print(trashCode);
-
-                if (r % 2 == 0){
-                    writeFile.write(obfuscate(trashCode));
-                }
 
                 writeFile.write(obfuscate(obfuscated_code) + " \n");
                 line = readFile.readLine();
@@ -89,6 +79,13 @@ public class Obfuscate{
         }
         newString += str.substring(curIn);
         
+        String trashCode = "\nint thisisnotreal = 0;\n for (int i = 0; i < 100; i++){\nreturn;\n}";
+
+        Pattern keyFinder = Pattern.compile("\\b(print|static|String|boolean|private|void|float|double|int|class|public|return|if|else|for|while|do|switch|case|default|break|continue|new|this|super|try|catch|finally|throw|throws|import|package|interface|extends|implements|abstract|final|native|strictfp|synchronized|transient|volatile|assert|enum|goto|const|instanceof|true|false|null)\\b");
+        Matcher keyMatcher = keyFinder.matcher(str);
+        while (keyMatcher.find()){
+            newString += trashCode;
+        }
         return newString;
     }
 
