@@ -19,11 +19,12 @@ public class Obfuscate{
 
             String line = readFile.readLine();
             boolean multipleComment = false;
+            Random randomNum = new Random(20);
 
             while (line != null) {
                 String obfuscated_code = "";
                 boolean singleComment = false;
-                
+                int r = randomNum.nextInt(10) ;
                 for (int i = 0; i < line.length(); i++) {
                     char c = line.charAt(i);
         
@@ -50,6 +51,12 @@ public class Obfuscate{
                     }
                 }
                 
+            
+                
+                System.out.print(r);
+
+
+
                 writeFile.write(obfuscate(obfuscated_code) + " \n");
                 line = readFile.readLine();
             } 
