@@ -13,23 +13,17 @@ public class Obfuscate{
         String fileName = args[0];
         String obfuscatedFile = "obfuscated2" + fileName;
 
-        File f = new File("F:\\" + fileName);
-        if (!(f.exists())) {
-            System.out.println("File not found. Make sure PATH is correct");
-            return;
-        }
-
         try{
             BufferedReader readFile = new BufferedReader(new FileReader(fileName));
             BufferedWriter writeFile = new BufferedWriter(new FileWriter(obfuscatedFile));
 
             String line = readFile.readLine();
+            boolean multipleComment = false;
+
             while (line != null) {
                 String obfuscated_code = "";
                 boolean singleComment = false;
-                boolean multipleComment = false;
-                boolean docstring = false;
-
+                
                 for (int i = 0; i < line.length(); i++) {
                     char c = line.charAt(i);
         
@@ -39,10 +33,6 @@ public class Obfuscate{
                         if (i < line.length() - 1 && c == '*' && line.charAt(i + 1) == '/') {
                             multipleComment = false;
                             i++;
-                        }
-                    } else if (docstring) {
-                        if (c == '"' && (i == 0 || line.charAt(i - 1)!= '\\')) {
-                            docstring = false;
                         }
                     } else {
                         if (c == '/') {
@@ -54,15 +44,13 @@ public class Obfuscate{
                                 i++;
                                 continue;
                             }
-                        } else if (c == '"') {
-                            docstring = true;
                         } else {
                             obfuscated_code += c;
                         }
                     }
                 }
                 
-                writeFile.write(obfuscate(obfuscated_code));
+                writeFile.write(obfuscated_code + " \n");
                 line = readFile.readLine();
             } 
 
