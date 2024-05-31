@@ -5,31 +5,35 @@ import random
 
 def obfuscate(code):
     obfuscated_code = ""
-    comment = False
-    docstring = False
-    for i in range(len(code)):
+    singleComment = False
+    multipleComment = False
+
+    i = 0
+    while i < len(code):
         char = code[i]
-        if comment:
+
+        if singleComment:
             if char == '\n':
-                comment = False
-                obfuscated_code += char
-        elif docstring:
-            if char == '"' and code[i - 1] != '\\':
-                docstring = False
-            obfuscated_code += char
+                singleComment = False
+        elif multipleComment:
+            if char == '"' and code[i:i+3] == '"""':
+                multipleComment = False
+                i += 2 
+            elif char == "'" and code[i:i+3] == "'''":
+                multipleComment = False
+                i += 2 
         elif char == '#':
-            comment = True
-        elif char == '"' and code[i - 1] != '\\':
-            docstring = True
-        elif char.isspace():
-            obfuscated_code += char
+            singleComment = True
+        elif char == '"' and code[i:i+3] == '"""':
+            multipleComment = True
+            i += 2 
+        elif char == "'" and code[i:i+3] == "'''":
+            multipleComment = True
+            i += 2
         else:
-            obfuscated_code += char 
-        
-        # Trash Code Insertion
-        if random.random() < 0.25:
-            trash_code = ''.join(random.choices('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', k=random.randint(5, 15)))
-            obfuscated_code += trash_code
+            obfuscated_code += char
+
+        i += 1
 
     return obfuscated_code
 

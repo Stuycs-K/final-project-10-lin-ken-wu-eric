@@ -48,6 +48,8 @@
 
 - Fixed multi-line comment stripping in java program. 
 - Removed java program's ability to remove string literals
+- Added python program's ability to strip multi-line comments (double and single quote)
+- Proofreading and editting for the first two sections of PRESENTATION.md
 
 ## Eric Wu
 
