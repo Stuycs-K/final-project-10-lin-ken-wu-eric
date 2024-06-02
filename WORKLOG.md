@@ -55,6 +55,11 @@
 
 - Added a new example from the IOCCC [Source](https://www.ioccc.org/2018/endoh2/hint.html)
 
+### 6/2/24
+
+- Updated Makefile to include commands from the parrot example. 
+- Updated README regarding use of this new demo. 
+
 ## Eric Wu
 
 ### 5/22/24

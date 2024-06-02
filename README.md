@@ -23,11 +23,32 @@ Our project would include "n" examples of obfuscated code that perform various f
 make compile
 ```
 
+The compile command compiles the C code for both examples that we have. 
+
 One of the examples that we have is a spinning donut. Running the following command would bring up that animation in the terminal. 
 
 ```
 make donut
 ```
+
+The second example is one of the winners from the 2018 IOCCC. There are ten panels that are in total. You can run: 
+
+```
+./0
+```
+
+This would display the first panel. Replace the number with any number from 0-9 inclusive. 
+
+You can also run:
+
+```
+make parrot
+```
+
+This would put all of the ten panels together into one animation/loop on the terminal.
+
+>[!NOTE]
+> Keep in mind both examples are a continuous loop. There is instructions at the bottom of the README to exit this state. 
 
 ### Programs
 
@@ -73,12 +94,6 @@ One of the demos is the donut code. We modified the code from the example in ord
 make donut ARGS="int1 int2" 
 ```
 
-> [!NOTE]
-> Some files are executable with some being an infinite loop. Running `CTRL + C` would exit all of the executable files. Other files would write new files. 
-
-> [!WARNING]
-> You need to have GCC (GNU Compiler Collection) which allows you to compile the C code. This is required for all out code to run. 
-
 Another demo is our obfuscation of some recursion code. You have to first compile the code.
 
 ```
@@ -91,3 +106,8 @@ To actually run the code, enter this:
 java (recursionFile)
 ```
 
+> [!NOTE]
+> Some files are executable with some being an infinite loop. Running `CTRL + C` would exit all of the executable files. Other files would write new files. 
+
+> [!WARNING]
+> You need to have GCC (GNU Compiler Collection) which allows you to compile the C code. This is required for all out code to run. 
