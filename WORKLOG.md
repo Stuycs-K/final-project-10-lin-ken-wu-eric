@@ -60,6 +60,10 @@
 - Updated Makefile to include commands from the parrot example. 
 - Updated README regarding use of this new demo. 
 
+### 6/3/24
+
+- Modified the Makefile, so that the parrot loop does not rewrite the original prog.c file. It will loop through another file named prog_next.c
+
 ## Eric Wu
 
 ### 5/22/24

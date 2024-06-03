@@ -1,7 +1,7 @@
 compile:
 	#@gcc -o donutExample donut.c -lm 
-	@gcc -o 0 prog.c
-	@./0 > 1.c
+	@gcc -o prog prog.c
+	@./prog > 1.c
 	@gcc -o 1 1.c
 	@./1 > 2.c
 	@gcc -o 2 2.c
@@ -23,7 +23,8 @@ compile:
 donut: donutExample
 	@./donutExample
 
-parrot: 
-	@while true; do \
-    make prog > /dev/null 2>&1 &&./prog | tee prog2.c && mv prog2.c prog.c; \
+parrot: prog
+	@while :; do \
+		./prog | tee prog_next.c; \
+		gcc prog_next.c -o ./prog; \
 	done
