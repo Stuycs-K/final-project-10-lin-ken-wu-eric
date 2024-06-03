@@ -19,11 +19,12 @@ public class Obfuscate{
 
             String line = readFile.readLine();
             boolean multipleComment = false;
+            Random randomNum = new Random(20);
 
             while (line != null) {
                 String obfuscated_code = "";
                 boolean singleComment = false;
-                
+                int r = randomNum.nextInt(10) ;
                 for (int i = 0; i < line.length(); i++) {
                     char c = line.charAt(i);
         
@@ -49,7 +50,7 @@ public class Obfuscate{
                         }
                     }
                 }
-                
+
                 writeFile.write(obfuscate(obfuscated_code) + " \n");
                 line = readFile.readLine();
             } 
@@ -78,6 +79,13 @@ public class Obfuscate{
         }
         newString += str.substring(curIn);
         
+        String trashCode = "\nint thisisnotreal = 0;\n for (int i = 0; i < 100; i++){\nreturn;\n}";
+
+        Pattern keyFinder = Pattern.compile("\\b(public)\\b");
+        Matcher keyMatcher = keyFinder.matcher(str);
+        while (keyMatcher.find()){
+            newString += trashCode;
+        }
         return newString;
     }
 

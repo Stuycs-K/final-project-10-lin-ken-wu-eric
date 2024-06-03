@@ -187,7 +187,7 @@ Next, let's take a look at programs made by other people.
 
 ## Programs:
 
-##### Python Docstring/Comment Stripping + Trash Code Insertion 
+##### Python Docstring/Comment Stripping + Trash Code Insertion
 
 Our Python program allows you to obfuscate a python file by docstring and comment stripping and inserting trash code.
 
@@ -195,7 +195,7 @@ Docstring and comment stripping makes code less readable. This is because these 
 
 Trash code insertion basically just adds random code that is literally gibberish to make the code more meaningless.
 
-##### Java Name Mangling + Comment Stripping + Removing whitespaces
+##### Java Change Names to Base64 + Comment Stripping + Removing whitespaces
 
 Our Java program allows you to obfuscate a Java file by removing newlines/whitespaces, removes comments, and name mangles.
 
