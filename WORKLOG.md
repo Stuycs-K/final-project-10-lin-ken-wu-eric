@@ -89,3 +89,7 @@
 
 ### 5/31/24 
 - Worked on adding trash code using java obfuscate code but it screws up code when adding trash code
+
+### 6/2/24 
+- Temporarily fixed java trash code insertion, might make it better though
+- Started making script (addition to the full presentation) 
