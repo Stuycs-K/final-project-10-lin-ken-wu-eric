@@ -66,27 +66,27 @@ public class Obfuscate{
     }
 
     public static String obfuscate(String str){
-        String newString = "";
+        String newStr = "";
         int curIn = 0;
-        Pattern varFinder = Pattern.compile("\\b(?!print|static|String|boolean|private|void|float|double|int|class|public|return|if|else|for|while|do|switch|case|default|break|continue|new|this|super|try|catch|finally|throw|throws|import|package|interface|extends|implements|abstract|final|native|strictfp|synchronized|transient|volatile|assert|enum|goto|const|instanceof|true|false|null)([a-zA-Z_][a-zA-Z0-9_]*)\\b");
+        Pattern varFinder = Pattern.compile("\\b(?!BufferedReader|BufferedWriter|Pattern|Matcher|print|static|String|boolean|private|void|float|double|int|class|public|return|if|else|for|while|do|switch|case|default|break|continue|new|this|super|try|catch|finally|throw|throws|import|package|interface|extends|implements|abstract|final|native|strictfp|synchronized|transient|volatile|assert|enum|goto|const|instanceof|true|false|null)([a-zA-Z_][a-zA-Z0-9_]*)\\b");
         Matcher match = varFinder.matcher(str);
         while (match.find()){
             String keyWord = match.group(1);
             String encoded = Base64.getEncoder().encodeToString(keyWord.getBytes());
-            newString += str.substring(curIn,match.start());
-            newString += encoded;
+            newStr += str.substring(curIn,match.start());
+            newStr += encoded;
             curIn = match.end();
         }
-        newString += str.substring(curIn);
+        newStr += str.substring(curIn);
         
-        String trashCode = "\nint thisisnotreal = 0;\n for (int i = 0; i < 100; i++){\nreturn;\n}";
+        String trashCode = "\nint asdfeaw = 0;\n for (int i = 0; i < 100; i++){\nreturn;\n}";
 
         Pattern keyFinder = Pattern.compile("\\b(public)\\b");
-        Matcher keyMatcher = keyFinder.matcher(str);
-        while (keyMatcher.find()){
-            newString += trashCode;
+        Matcher keyMatch = keyFinder.matcher(str);
+        while (keyMatch.find()){
+            newStr += obfuscate(trashCode);
         }
-        return newString;
+        return newStr;
     }
 
 }
