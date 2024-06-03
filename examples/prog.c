@@ -1,24 +1,32 @@
-/*0+)IFMNFU*+0-02;>@=,(#1555546231rst%wvu#08OCCC*/#include/*#exclude*/<stdio.h>
-#define/**/Q(q)int*P,t,u,M[99999],*S=3557+M,*C=M+3800;char*Q=#q;int(main)(){q;}
-Q(for(;*Q>34?(*S++=*Q++):*(Q+=*Q-27?1:Q[2]/49+4););for(S=M+9;*C;u=t%9,t<18?*++S
-=t<0?*C++%92*57-t-500:t<9?M[u]:M[u]++:t<27?M[u]=*S--:u?t=*S--,u<2?M[t]=*S--:u<3
-?C+=*S--?t:0,0:u-6?*S=u<4?*S-t:u/*(HELMET)*/<5?*S%t:*S<t:putchar(t):(*S=M[*S]))
-t=*C++-93;return+0**"Ler[Tsaxiyj.V}<dzSGs`Fk{YezYTtbx0d{iykNT}?dzaxiyjEK}TdzHe"
-"iy`Me{Tf|)dzHeiyHeiyjxiyaxLdz2sxKe{'d|Yd{2sy?[saY^{tGerjxujxvbqax`{)dzckydj/d"
-"zjxkya_}JdziHf}Ydz-Vw2drQ)qJe_yh@*}<dzHehyAehy)*nx{qnxKe{Df|Qd{uc)e{&dzZfhyCe"
-"hy6fuchyex;e{ZdzIe_ynq1dqD+u/dcyl5L}<dzLIETi{x=b{1g|{uc2d{byaxvcDfd}&dzDVd{x6"
-"ecOez1dcydCf_{{)d|qSf2T_{x$c{;g|{{[30m[40muFfjx}[0m4czbq_xucx/d}Jez0dlyc/d{hycSf{hychycF"
-"c{hy_)Ic}{q_0d{qb_}.cz:eo:T`{x[30m[40mp]q)[35m[45md`{D`z[30m[40mD+ulx[0mcx{-dzcCez7evOe~Hf~0dcx}/dzd~cxx"
-"~6f~m6e0dcx}{}Udzc(*{x~c0d{T[30m[40mf|[35m[45m.dz'd~c5L}Ecz1d[30m[40m[Ty[0m/*0+)IFMNFU*+0-02;>@=,(#15555"
-"46231rst%wvu#08OCCC*/#incl[30m[40mud[35m[45me/*#exclude[30m[40m*/<s[35m[45mtdio.[30m[40mh[0m>#define/**/Q(q)int*P,t,u,M["
-"99999],*S=3557+M,*C=M+38[30m[40m00[35m[45m;char*Q[30m[40m=#[35m[45mq;[30m[40min[0mt(ma[30m[40min[35m[45m)[30m[40m()[35m[45m{[30m[40mq[0m;}Q(@@~cd`c/C@~o`rrdc~nm/GS"
-"ghr~o`qqns~hr~mn~lnqd/F[30m[40mH[35m[45m~g`ud~bd`[30m[40mrd[35m[45mc~[30m[40ms[0mn~ad/O[30m[40m@[35m[45m~[30m[40mdw[35m[45mo[30m[40mh[0mqdc~`mc~fnmd~sn~ldds~lx~l`j"
-"dq/GSghr~hr~`~k`sd~o`q[30m[40mq[35m[45mns/LAdqdes~ne~[30m[40mk[0mhed+~H[30m[40m~[35m[45mqdrs~[30m[40mh[0mm~od`bd/KH&c~ad~otrghmf~to"
-"~sgd~c`hrhdr/X@~qtm~c[30m[40mn[35m[45mvm~sgd~btqs`hm~[30m[40m`[0mmc~inh[30m[40mm[35m[45mdc~sgd[30m[40m~[0mbgnhq~hmuhrhakd/FSghr~hr~"
-"`m~dw,o`qqns/6Zba4ORR[30m[40mZT[35m[45m`]Sa`fdgO2bPV[T[30m[40ma[0m5dT[[30m[40mM[35m[45mVfbZZHY[30m[40mb[0m79bVT^:L;S<J=X>Q?X@SAZBWC"
-"IDNEQF`GXPUUgW^aa[bIaZ[30m[40m[Z[35m[45mafaf_`Kg`ZYY[[[30m[40m`[0mgff^[30m[40mJ[35m[45mg``8OKK[30m[40mT[0m,VNa6/TZSW`0cRMWO33f][T`-"
-"[KaV,[Z/6aPWLabf[P[a[30m[40m3f[35m[45m`[30m[40m0[35m[45mdPR`3M3]8/R[Z-Z[30m[40m,[0mVZ[30m[40mR[35m[45m#MRTfNT[30m[40mT[0m4d5^$S]8RMKRVaMM8T$9aaZgaR"
-"Sg1NZ1`5^d`LK].%&[30m[40mVZ,[35m[45m'R#g[30m[40mKaZ[35m[45mf1TT10aa`b].T[30m[40mZ-[35m[45mKK/28`-[30m[40m6[0mVKf'ZH^P(./Ka8a)8[O6NaTbf*["
-"Hd+Z(V8&3K%)VNT[30m[40mR#[35m[45m&WbX[H^dcO[30m[40mWOf]8[OR[a[35m[45mTOM2V'$9aLR[30m[40m[R[0mW*`0+OMW[([14ZLaK%).NO6RMRS"
-"*[0+ZOWZS]_<<<[30m[40m<<[35m[45mhttp://cultofthepartyparrot.com/[30m[40m>>>[0m>>__<-_Source_of_Parrots__"
-"(                      I'd be pushing up the daisies!                       ")
+
+  #define/**/Q(   q)int*P,t,u,M                                  [99999],                                                          *S=3557\
+  +M,*C=M+3800;   char*Q=#q;int                                    (main)                                                            (){q;}
+    # include       <stdio.h>                                       /*IOC                                                             CCC*/
+     Q(for(;*       Q>34?(*S                                        ++=*Q                                                             ++):*
+     (Q+= *Q-       27?1:Q[2     ]/49+    4););                     for (          S=M+9                ;*C;u     =t%9,t              <18?*
+     ++S=t<0?       *C++%92*    57-t-500:t<9?M[u]:M        [u]++:t<27?M[u       ]=*S--:u?t=*        S--,u<2?M[t]=*S--:u<     3?C+=*S--?t:0,
+     0:u-6?*S       =u<4?*S-     t:u/*ABCDEFGH*/<5?*     S%t:*S<t:putchar     (t):(*S=M[*S]))t     =*C++-93;return+0**"    Ler[Tsaxiyj.V}<\
+     dzSGs`Fk       {YezYTtb     x0d{iy        kNT}?d   zaxiyjE   K}TdzHe    iy`Me{      Tf|)dz   HeiyH       eiyjxiyax   Ldz2sx     Ke{'d\
+     |Yd{2sy?       [saY^{tG     erjxuj        xvbqax`  {)dzc       kydj/    dzjxkya_}JdziHf}Ydz -Vw2d         rQ)qJe_y  h@*}<d       zHeh\
+     yAehy)*n       x{qnxKe{     Df|Qd{         uc)e{&  dzZfh       yCehy    6fuchyex;e{ZdzIe_yn q1dqD         +u/dcyl5  L}<dzL       IETi\
+     {x=b{1g|{uc2d{byaxvcDfd     }&dzDVd       {x6ecOe  z1dcydCf_{{)d|qSf2   T_{x$c{              ;g|{{u      Ffjx}4czb   q_xucx/d }Jez0dly\
+       c/d{hycSf{hychycFc{      hy_)Ic}{q     _0d{qb_}.c  z:eo:T`{xp]q1d`{D`  zD+ulxcx{-dzcCez     7evOe~Hf~0dcx}/dzd~cx    x~6f~m6e0dcx}{}Ud\
+          zc(*{x~c0d{Tf         |.dz'd~c5     L}Ecz1d[Ty     /*0+)IFMNFU*+0-    02;>@=,(#155        5546231rst%wvu#08OCC       C*/#include/*#"
+
+
+
+     "exclude*/<stdio.                                                                                                  h>#def\
+    ine/**/Q(q)int*P,t,u,M[                                                                                             99999],\
+      *S=3557+M,*C=M+3800;cha                                                                                             r*Q=#\
+       q;int(ma      in)(){q;}                                                                                           Q(@@~c\
+       d`c/C@~o        `rrdc~n                                                                                        m/GSghr~o`qqns~hr~\
+       mn~lnqd/       FH~g`ud~     bd`rdc~sn~a d/O@~dw ohqdc~`mc~fnmd~sn~    ldds~lx~l`jdq/GSgh       r~hr~`~k`sd     ~o`qqns/LAdqdes~ne\
+       ~khed+~H~qdrs~hm~od`bd    /KH&c~ad~otrghmf~to~s  gd~c`hrhdr/X@~qtm~cn vm~sgd~btqs`hm~`mc~i   nhmdc~sgd~bgnhq~      hmuhr\
+       hakd/FSghr~hr~`m~dw,     o`qqns     /6Zba4ORRZ    T`]Sa`    fdgO2bPV[   Ta5dT[    MVfbZZHY  b79bVT^    :L;S<J=     X>Q?X\
+       @SAZBWCIDNEQF`GXPU      UgW^a         a[bIaZ[Z    afaf_`     Kg`ZYY[    [`gff^     Jg``8OK KT,VNa6      /TZSW`     0cRMWO       3\
+       3f][T`-[K               aV,[Z         /6aPWLab    f[P[a3                f`0dPR             `3M3]8/      R[Z-Z,     VZR#MR     TfNTT\
+       4d5^$S]8                RMKRVa       MM8T$9aaZ    gaRSg1                NZ1`5^              d`LK].      %&VZ,'     R#gKaZ       f1T\
+     T10aa`b].TZ-               KK/28`-6VKf'ZH^P(./Ka8 a)8[O6NaTb            f*[Hd+Z(V              8&3K%)VNTR#&WbX[      H^dcOWOf]8[OR[aT\
+    OM2V'$9aLR[RW*               `0+OMW[([14ZLaK%).NO6 RMRS*[0+ZO            WZS]_<<<<               <htt"/*pa*/"p:        //"/*x@*/"cult\
+     ofthepartypa                    rrot.co    m/>>>>  >__<-_So             urce_of_P                   arrots                 __(")
+
