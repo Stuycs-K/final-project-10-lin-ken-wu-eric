@@ -54,37 +54,6 @@ public class Recursion {
         }
 }
 ```
-<!-- ```java
-class SavingsAccount extends BankAccount {
-private double interestRate;
-private int withdrawCount;
-
-public SavingsAccount(String name, double initialDeposit, double interestRate)throws Exception {
-    super(name, initialDeposit);
-    if (interestRate <= 0)
-       throw new Exception("Interest rate must be greater than 0");
-    this.interestRate = interestRate;
-}
-public void addInterest() throws Exception {
-    this.deposit(getBalance() * interestRate);
-}
-
-public void withdraw(double amount) throws Exception {
-        withdrawCount++;
-        if (amount <= 0) {
-            withdrawCount--;
-            throw new Exception("Balance is negative");
-        }
-        if (withdrawCount > 6)
-            throw new Exception("You have withdrawn 6 times already");
-        super.withdraw(amount);
-}
-
-public int getWithdrawCount() {
-    return withdrawCount;
-}
-}
-``` -->
 
 First, let's change change some of the variable names. The following result would be: 
 ```java
@@ -102,37 +71,6 @@ public class Pol {
 }
 ```
 
-<!-- ```java
-class Ju extends Po {
-private double ab;
-private int ba;
-
-public Ju(String a, double b, double c)throws Exception {
-    super(a, b);
-    if (c <= 0)
-       throw new Exception("IkludGVyZXN0IHJhdGUgbXVzdCBiZSBncmVhdGVyIHRoYW4gMCI=");
-    this.c = c;
-}
-public void hh() throws Exception {
-    this.jk(ya() * ab);
-}
-
-public void ht(double rt) throws Exception {
-        ba++;
-        if (rt <= 0) {
-            ba--;
-            throw new Exception("QmFsYW5jZSBpcyBuZWdhdGl2ZQ==");
-        }
-        if (ba > 6)
-            throw new Exception("WW91IGhhdmUgd2l0aGRyYXduIDYgdGltZXMgYWxyZWFkeQ==");
-        super.ht(rt);
-}
-
-public int zz() {
-    return ba;
-}
-}
-``` -->
 The only problem here is that this file extends from another file, so all files would have to be obfuscated. Also, the strings were turned into base64 to throw off the hackers. 
 
 Next, let's remove all the whitespaces from this Java file.
@@ -146,36 +84,11 @@ Now, let's add random code to throw the hackers off.
 public class Pol { public static void main(String a[]) {System.out.println(b(4));} public static double loo(double p){return p;} public static int b(int i) {if (i == 0){return 0;} else return b(i - 1) + 2;}} public static double che(double a, double b){return a * b;} public static double paw(double a, double b){ return 0.5 * a * b;} public static String aasdfjEIF(String alsdjlfIWFWJLDVNCX){String i = "lJFVIej82348"; return alsdjlfIWFWJLDVNCX + i + kwjeifaiiozI34324;}
 ```
 
-<!-- ```java
-class Ju extends Po {private double ab; private int ba;public Ju(String a, double b, double c)throws Exception {super(a, b);if (c <= 0)throw new Exception("IkludGVyZXN0IHJhdGUgbXVzdCBiZSBncmVhdGVyIHRoYW4gMCI=");this.c = c;
-}
+Although the code may be very obvious as for its function, larger projects will find obfuscation necessary. In addition, the context of the code is fully hidden, but it still runs fully. It would be even more effective if we add random print statements of the dummy functions. 
 
+- In the donut example shown, the code is shaped in a donut. If someone just took the code and saw it in the donut shape, it'd take longer to piece together because of the difference in whitespace. 
 
-public void hh() throws Exception {
-    this.jk(ya() * ab);
-}
-
-public void ht(double rt) throws Exception {
-        ba++;
-        if (rt <= 0) {
-            ba--;
-            throw new Exception("QmFsYW5jZSBpcyBuZWdhdGl2ZQ==");
-        }
-        if (ba > 6)
-            throw new Exception("WW91IGhhdmUgd2l0aGRyYXduIDYgdGltZXMgYWxyZWFkeQ==");
-        super.ht(rt);
-}
-
-public int zz() {
-    return ba;
-}
-}
-``` -->
-
-
-Although the code may be very obvious as for its function, larger projects will find obfuscation necessary. In addition, the context of the code is fully hidden.
-
-- In the donut example shown in donut.c, the code is shaped in a donut. If someone just took the code and saw it in the donut shape, it'd take longer to piece together because of the difference in whitespace. 
+- In the parrot example shown, the initial code is formatted to the words "Undead Parrot". When the function is ran, there will be an animation of a parrot as a result of executable code. 
 
 ## Demos:
 

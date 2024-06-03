@@ -11,7 +11,7 @@ public class Obfuscate{
         }
 
         String fileName = args[0];
-        String obfuscatedFile = "obfuscated2" + fileName;
+        String obfuscatedFile = "ob" + fileName;
 
         try{
             BufferedReader readFile = new BufferedReader(new FileReader(fileName));
@@ -86,6 +86,7 @@ public class Obfuscate{
         while (keyMatch.find()){
             newStr += obfuscate(trashCode);
         }
+        newStr = newStr.replace("==","");
         return newStr;
     }
 
