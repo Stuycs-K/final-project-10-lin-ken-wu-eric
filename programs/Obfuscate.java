@@ -72,7 +72,7 @@ public class Obfuscate{
         Matcher match = varFinder.matcher(str);
         while (match.find()){
             String keyWord = match.group(1);
-            String encoded = Base64.getEncoder().encodeToString(keyWord.getBytes());
+            String encoded = Base64.getEncoder().encodeToString(keyWord.getBytes()).replace("==","");
             newStr += str.substring(curIn,match.start());
             newStr += encoded;
             curIn = match.end();
@@ -86,7 +86,6 @@ public class Obfuscate{
         while (keyMatch.find()){
             newStr += obfuscate(trashCode);
         }
-        newStr = newStr.replace("==","");
         return newStr;
     }
 
