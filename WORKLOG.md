@@ -102,3 +102,7 @@
 ### 6/2/24 
 - Temporarily fixed java trash code insertion, might make it better though
 - Started making script (addition to the full presentation) 
+
+### 6/3/24
+- Fixed renaming code into base64 because of the equal sign problem
+- More script writing, explanations
