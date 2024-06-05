@@ -64,6 +64,10 @@
 
 - Modified the Makefile, so that the parrot loop does not rewrite the original prog.c file. It will loop through another file named prog_next.c
 
+### 6/4/24
+
+- Worked on script
+
 ## Eric Wu
 
 ### 5/22/24
