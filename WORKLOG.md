@@ -114,3 +114,11 @@
 ### 6/3/24
 - Fixed renaming code into base64 because of the equal sign problem
 - More script writing, explanations
+
+### 6/4/24
+
+- Looking over presentation/script
+
+### 6/5/24 
+
+- Adding more in presentation

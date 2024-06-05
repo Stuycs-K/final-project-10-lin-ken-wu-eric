@@ -106,6 +106,9 @@ To actually run the code, enter this:
 java (recursionFile)
 ```
 
+>[!NOTE]
+> recursionFile refers to the files in /demos
+
 > [!NOTE]
 > Some files are executable with some being an infinite loop. Running `CTRL + C` would exit all of the executable files. Other files would write new files. 
 

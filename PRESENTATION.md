@@ -86,9 +86,14 @@ public class Pol { public static void main(String a[]) {System.out.println(b(4))
 
 Although the code may be very obvious as for its function, larger projects will find obfuscation necessary. In addition, the context of the code is fully hidden, but it still runs fully. It would be even more effective if we add random print statements of the dummy functions. 
 
+>[!NOTE]
+> This example is under ```demos```.
+
 - In the donut example shown, the code is shaped in a donut. If someone just took the code and saw it in the donut shape, it'd take longer to piece together because of the difference in whitespace. 
 
 - In the parrot example shown, the initial code is formatted to the words "Undead Parrot". When the function is ran, there will be an animation of a parrot as a result of executable code. 
+
+For more great examples of obfuscated code in C, we recommend you to check out [Yusuke Endoh](https://www.youtube.com/c/yusukeendoh), the world's number one International Obfuscated C Code Contest (IOCCC) competitor!
 
 ## Demos:
 
@@ -100,19 +105,21 @@ Next, let's take a look at programs made by other people.
 
 ## Programs:
 
-##### Python Docstring/Comment Stripping + Trash Code Insertion
+##### Python Docstring/Comment Stripping
 
-Our Python program allows you to obfuscate a python file by docstring and comment stripping and inserting trash code.
+Our Python program allows you to obfuscate a python file by docstring and comment stripping.
 
 Docstring and comment stripping makes code less readable. This is because these features provide insight into the purpose and logic of the code. Without these, it would make it harder for hackers to deciper what you are trying to achieve. 
 
-Trash code insertion basically just adds random code that is literally gibberish to make the code more meaningless.
 
 ##### Java Change Names to Base64 + Comment Stripping + Removing whitespaces
 
-Our Java program allows you to obfuscate a Java file by removing newlines/whitespaces, removes comments, and name mangles.
+Our Java program allows you to obfuscate a Java file by removing newlines/whitespaces, removes comments, and renames a lot of things.
 
-Removing newlines will make the code way less readable, removing comments removes the insight of the code, and changing variable names removes the context of each function and the general code.
+Removing newlines will make the code way less readable, removing comments removes the insight of the code, and changing variable names removes the context of each function and the general code. 
+
+>[!NOTE]
+> Using our java obfuscation program will only work with standalone files that only use Java keywords, which means you can't have other classes unless you edit the program.
 
 <!-- ## Our Tool:
 
