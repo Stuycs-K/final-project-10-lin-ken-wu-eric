@@ -29,13 +29,27 @@ One way is by renaming all of your variables, function names, and parameters to 
 
 Removing whitespace is one of the easiest ways to make code harder to understand. However, some coding languages may prevent the full ability of this. In Python, indentations are necessary to actually make code function. 
 
+In C, you can put all of your code in the same line. It would make it harder to read. 
+
 - Trash Code Insertion
 
 By inserting trash code, it adds more chaos and randomness to the logic and meaning of the code, if it can be somewhat understood. For example, adding recursive functions to code focused on the volumes of shapes is completely irrelevant.
 
+Junk code also don't affect the program's functionality in any way. They just increase the time complexity of the program. In some cases, it would make it hard to find the actual content or lines of code that is of use. 
+
 - Comments/Docstring Stripping
 
-Removing the comments in code and removing docstrings will essentially remove any insight on the logic of the code.
+Removing the comments in code and removing docstrings will essentially remove any insight on the logic of the code. It makes it harder for developers to understand this topic especially if they are unfamiliar with this.
+
+Comments are also a good way to debug your code and for future use. It would take a lot longer for you to go back and try to re-understand all of the code. 
+
+- String Extraction and Decoding
+
+You can extract all the strings from the file and decode it in any cipher. Each string can be encoded using different ciphers to increase the complexity. In addition, you can add multiple layers to this process. A common encryption algorithm is base64, or you can use more complex ones such as RSA. 
+
+This process can be somewhat reversed, but it would involved time. It would involve having the key generated or retrieved during runtime which makes static analysis more challenging.
+
+Keep in mind, these obfuscation techniques, as they get more complicated, can introduced unintentional bugs and would increase development time. Code obfuscation is to help obscure your code, but not harm it. 
 
 ## Examples:
 
@@ -92,7 +106,7 @@ Although the code may be very obvious as for its function, larger projects will 
 
 ## Demos:
 
-Looking at our demos, the first one is the donut. We added a small feature to change the speed of the rotating donut, and tried to manually obfuscate it by messing with whitespace because of the flexibility of coding in C. 
+Looking at our demos, the first one is the donut. We added a small feature to change the speed of the rotating donut(in the x direction and the z direction), and tried to manually obfuscate it by messing with whitespace because of the flexibility of coding in C. 
 
 Next, let's take a look at programs made by other people.
 
@@ -106,7 +120,9 @@ Our Python program allows you to obfuscate a python file by docstring and commen
 
 Docstring and comment stripping makes code less readable. This is because these features provide insight into the purpose and logic of the code. Without these, it would make it harder for hackers to deciper what you are trying to achieve. 
 
-Trash code insertion basically just adds random code that is literally gibberish to make the code more meaningless.
+Trash code insertion basically just adds a lot of random code that is literally gibberish to make the code more meaningless. They are in the form of assignment and operation. We are just assignment variable of random letters mashed together with a number or two. 
+
+Operation just uses a variable, pre-existing or not, and performing one of the four basic operations. The trash code is unrelated to the rest of the program and shouldn't hinder the functionality. 
 
 ##### Java Change Names to Base64 + Comment Stripping + Removing whitespaces
 
