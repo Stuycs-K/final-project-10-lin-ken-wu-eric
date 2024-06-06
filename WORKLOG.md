@@ -68,6 +68,14 @@
 
 - Worked on script
 
+### 6/5/24
+
+- Worked on doing trash code insertion for python program. 
+
+### 6/6/24
+
+- Finished Trash Code Insertion, so new file doesn't throw any indentation error. 
+
 ## Eric Wu
 
 ### 5/22/24
