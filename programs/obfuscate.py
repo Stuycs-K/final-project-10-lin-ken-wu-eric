@@ -12,8 +12,7 @@ def junkminion(length, current_indent):
         if rand_type == 'assignment':
             var_name = ''.join(random.choices(string.ascii_letters, k=1) + random.choices(string.ascii_letters + string.digits, k=9))
             r1 = random.randint(0, 999)
-            r2 = random.randint(0, 999)
-            junk_code += f'{indent}{var_name} = {r1} * {r2}\n'
+            junk_code += f'{indent}{var_name} = {r1}\n'
         else:
             op = random.choice(['+', '-', '*', '/'])
             var1 = ''.join(random.choices(string.ascii_letters, k=5))

@@ -1,5 +1,5 @@
 compile:
-	#@gcc -o donutExample donut.c -lm 
+	@gcc -o donutExample donut.c -lm 
 	@gcc -o prog prog.c
 	@./prog > 1.c
 	@gcc -o 1 1.c
@@ -27,4 +27,5 @@ parrot: prog
 	@while :; do \
 		./prog | tee prog_next.c; \
 		gcc prog_next.c -o ./prog; \
+		sleep 0.1; \
 	done
