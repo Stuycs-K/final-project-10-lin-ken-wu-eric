@@ -15,7 +15,8 @@ Hiding your code is very important because in the worst case scenario that your 
 
 Essentially, it will hinder the ability of hackers who steal code to understand your code and modify it.  
 
-HOWEVER, it is important to note that code obfuscation does not help increase the security of your code AT ALL. Keeping your data safe is your own responsibility and code obfuscation does not hide your data; it only makes your code unreadable. 
+> [!WARNING]
+> HOWEVER, it is important to note that code obfuscation does not help increase the security of your code AT ALL. Keeping your data safe is your own responsibility and code obfuscation does not hide your data; it only makes your code unreadable. 
 
 ## What are the different methods you can use to obfuscate code? 
 
