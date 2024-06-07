@@ -11,7 +11,7 @@ public class Obfuscate{
         }
 
         String fileName = args[0];
-        String obfuscatedFile = Base64.getEncoder().encodeToString(fileName.substring(0,fileName.length()-5).getBytes()) + ".java";
+        String obfuscatedFile = Base64.getEncoder().encodeToString(fileName.substring(0,fileName.length()-5).getBytes()).replace("==","") + ".java";
         // String fileName2 = fileName.substring(0,fileName.length()-5);
 
         try{

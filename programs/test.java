@@ -1,6 +1,6 @@
 public class test {
 
-    public static void main() {
+    public static void main(String[] args) {
         // Test File
 
         System.out.println("Eric is a Bozo");
