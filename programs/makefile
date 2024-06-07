@@ -8,4 +8,4 @@ compile:
 	@javac Obfuscate.java
 
 clean:
-	@rm -f *.o *.class server client 2> /dev/null || true
+	@rm -f *.o *.class 2> /dev/null || true

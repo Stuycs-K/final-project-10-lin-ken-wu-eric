@@ -28,3 +28,6 @@ parrot: prog
 		./prog | tee prog_next.c; \
 		gcc prog_next.c -o ./prog; \
 	done
+
+clean:
+	@rm -f *.o *.class 2> /dev/null || true
