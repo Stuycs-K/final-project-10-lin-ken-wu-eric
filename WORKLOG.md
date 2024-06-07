@@ -75,6 +75,7 @@
 ### 6/6/24
 
 - Finished Trash Code Insertion, so new file doesn't throw any indentation error. 
+- Added to PRESENTATION.md
 
 ## Eric Wu
 
