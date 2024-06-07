@@ -29,3 +29,6 @@ parrot: prog
 		gcc prog_next.c -o ./prog; \
 		sleep 0.1; \
 	done
+
+clean:
+	@rm -f *.o *.class 2> /dev/null || true
