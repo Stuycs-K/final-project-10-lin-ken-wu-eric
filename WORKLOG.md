@@ -130,3 +130,8 @@
 ### 6/5/24 
 
 - Adding more in presentation
+- Trying to improve the java obfuscation, class name/file name issue when testing 
+
+### 6/6/24
+
+- Fixed java obfuscation code finally
