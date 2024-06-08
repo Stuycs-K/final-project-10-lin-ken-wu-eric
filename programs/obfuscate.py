@@ -4,20 +4,54 @@ import re
 import random
 import string
 
+variables = []
+
 def junkminion(length, current_indent):
     indent = " " * current_indent
     junk_code = ''
     for _ in range(length):
-        rand_type = random.choice(['assignment', 'operation'])
+        rand_type = random.choice(['assignment', 'operation', 'if', 'while'])
         if rand_type == 'assignment':
             var_name = ''.join(random.choices(string.ascii_letters, k=1) + random.choices(string.ascii_letters + string.digits, k=9))
+            variables.append(var_name)
             r1 = random.randint(0, 999)
             junk_code += f'{indent}{var_name} = {r1}\n'
-        else:
-            op = random.choice(['+', '-', '*', '/', '%'])
+        elif rand_type == 'operation':
+            op = random.choice(['+', '-', '*', '/', '%', '**', '//'])
             var1 = ''.join(random.choices(string.ascii_letters, k=5))
-            var2 = ''.join(random.choices(string.ascii_letters, k=5))
+            if random.random() < 0.5:  
+                if (len(variables) == 0):
+                    var2 = random.randint(0, 999)
+                else: 
+                    var2 = random.choice(variables)
+            else: 
+                var2 = random.randint(0, 999)
             junk_code += f'{indent}{var1} = {random.randint(0, 999)} {op} {var2}\n'
+        elif rand_type == 'if':
+            if random.random() < 0.5:  
+                if (len(variables) == 0):
+                    var1 = random.randint(0, 999)
+                else: 
+                    var1 = random.choice(variables)
+            else: 
+                var1 = random.randint(0, 999)
+            junk_code += f'{indent}if {var1} > {random.randint(0, 999)}:\n'
+            junk_code += junkminion(1, current_indent + 4)
+        elif rand_type == 'while':
+            if (len(variables) == 0):
+                pass
+            else: 
+                if random.random() < 0.5:
+                    var1 = random.choice(variables)
+                    junk_code += f'{indent}while {var1} < {random.randint(0, 999)}:\n'
+                    junk_code += f'{indent}    {var1} += 1\n'
+                    junk_code += junkminion(1, current_indent + 4)
+                else:
+                    var1 = random.choice(variables)
+                    junk_code += f'{indent}while {var1} > {random.randint(0, 999)}:\n'
+                    junk_code += f'{indent}    {var1} -= 1\n'
+                    junk_code += junkminion(1, current_indent + 4)
+
     return junk_code
 
 def junkgenerator(num, current_indent):
@@ -45,7 +79,7 @@ def junkmachine(code):
     
         whitespaces.append(whitespace)
 
-    print(whitespaces)
+    # print(whitespaces)
     obfuscated_code = ""
     
     for i in range(len(lines)):
