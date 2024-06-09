@@ -86,8 +86,6 @@ public class Pol {
 }
 ```
 
-The only problem here is that this file extends from another file, so all files would have to be obfuscated. Also, the strings were turned into base64 to throw off the hackers. 
-
 Next, let's remove all the whitespaces from this Java file.
 ```java
 public class Pol { public static void main(String a[]) {System.out.println(b(4));} public static int b(int i) {if (i == 0){return 0;} else return b(i - 1) + 2;}}
