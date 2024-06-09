@@ -119,7 +119,7 @@ Next, let's take a look at programs made by other people.
 
 ## Programs:
 
-##### Python Docstring/Comment Stripping
+##### Python Docstring/Comment Stripping + Trash Code Insertion
 
 Our Python program allows you to obfuscate a python file by docstring and comment stripping.
 
