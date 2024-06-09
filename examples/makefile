@@ -31,4 +31,4 @@ parrot: prog
 	done
 
 clean:
-	@rm -f *.o *.class 2> /dev/null || true
+	@rm -f *.o *.class prog donutExample 1 2 3 4 5 6 7 8 9 2> /dev/null || true
