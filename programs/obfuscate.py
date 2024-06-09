@@ -4,21 +4,54 @@ import re
 import random
 import string
 
+variables = []
+
 def junkminion(length, current_indent):
     indent = " " * current_indent
     junk_code = ''
     for _ in range(length):
-        rand_type = random.choice(['assignment', 'operation'])
+        rand_type = random.choice(['assignment', 'operation', 'if', 'while'])
         if rand_type == 'assignment':
             var_name = ''.join(random.choices(string.ascii_letters, k=1) + random.choices(string.ascii_letters + string.digits, k=9))
+            variables.append(var_name)
             r1 = random.randint(0, 999)
-            r2 = random.randint(0, 999)
-            junk_code += f'{indent}{var_name} = {r1} * {r2}\n'
-        else:
-            op = random.choice(['+', '-', '*', '/'])
+            junk_code += f'{indent}{var_name} = {r1}\n'
+        elif rand_type == 'operation':
+            op = random.choice(['+', '-', '*', '/', '%', '**', '//'])
             var1 = ''.join(random.choices(string.ascii_letters, k=5))
-            var2 = ''.join(random.choices(string.ascii_letters, k=5))
+            if random.random() < 0.5:  
+                if (len(variables) == 0):
+                    var2 = random.randint(0, 999)
+                else: 
+                    var2 = random.choice(variables)
+            else: 
+                var2 = random.randint(0, 999)
             junk_code += f'{indent}{var1} = {random.randint(0, 999)} {op} {var2}\n'
+        elif rand_type == 'if':
+            if random.random() < 0.5:  
+                if (len(variables) == 0):
+                    var1 = random.randint(0, 999)
+                else: 
+                    var1 = random.choice(variables)
+            else: 
+                var1 = random.randint(0, 999)
+            junk_code += f'{indent}if {var1} > {random.randint(0, 999)}:\n'
+            junk_code += junkminion(1, current_indent + 4)
+        elif rand_type == 'while':
+            if (len(variables) == 0):
+                pass
+            else: 
+                if random.random() < 0.5:
+                    var1 = random.choice(variables)
+                    junk_code += f'{indent}while {var1} < {random.randint(0, 999)}:\n'
+                    junk_code += f'{indent}    {var1} += 1\n'
+                    junk_code += junkminion(1, current_indent + 4)
+                else:
+                    var1 = random.choice(variables)
+                    junk_code += f'{indent}while {var1} > {random.randint(0, 999)}:\n'
+                    junk_code += f'{indent}    {var1} -= 1\n'
+                    junk_code += junkminion(1, current_indent + 4)
+
     return junk_code
 
 def junkgenerator(num, current_indent):
@@ -28,51 +61,93 @@ def junkgenerator(num, current_indent):
         code += "\n" + junkminion(length, current_indent) + "\n"
     return code
 
-def obfuscate(code):
+def junkmachine(code):
+    lines = []
+    for line in code.split('\n'):
+        if line.strip():
+            lines.append(line)
+
+    whitespaces = []
+
+    for line in lines:
+        whitespace = 0
+        for char in line:
+            if char.isspace():
+                whitespace += 1
+            else:
+                break
+    
+        whitespaces.append(whitespace)
+
+    # print(whitespaces)
+    obfuscated_code = ""
+    
+    for i in range(len(lines)):
+        line = lines[i]
+        obfuscated_code += line + "\n"
+        
+        if random.random() < 0.5:  
+            if (i + 1 == len(whitespaces)):
+                obfuscated_code += junkgenerator(random.randint(10, 30), whitespaces[i])
+            elif (whitespaces[i] < whitespaces[i + 1]):
+                obfuscated_code += junkgenerator(random.randint(10, 30), whitespaces[i + 1])
+            else :
+                obfuscated_code += junkgenerator(random.randint(10, 30), whitespaces[i])
+
+    return obfuscated_code
+
+def obfuscate(file):
+    code = file.read()
+
+    lines = []
+    for line in code.split('\n'):
+        if line.strip():
+            lines.append(line)
+    
     obfuscated_code = ""
     singleComment = False
     multipleComment = False
-    current_indent = 0
 
-    i = 0
-    while i < len(code):
-        char = code[i]
+    for i in range(len(lines)): 
+        singleComment = False
+        line = lines[i] 
+        j = 0  
+        while j < len(line):  
+            char = line[j]
 
-        if singleComment:
-            if char == '\n':
-                singleComment = False
-        elif multipleComment:
-            if char == '"' and code[i:i+3] == '"""':
-                multipleComment = False
-                i += 2 
-            elif char == "'" and code[i:i+3] == "'''":
-                multipleComment = False
-                i += 2 
-        elif char == '#':
-            singleComment = True
-        elif char == '"' and code[i:i+3] == '"""':
-            multipleComment = True
-            i += 2 
-        elif char == "'" and code[i:i+3] == "'''":
-            multipleComment = True
-            i += 2
-        elif char == '\n':
-            obfuscated_code += char
-            if not singleComment and not multipleComment:
-                current_indent = len(re.match(r'^\s*', code[i+1:]).group(0))
-                if random.random() < 0.2:  
-                    junk_code = junkgenerator(random.randint(10, 30), current_indent)
-                    obfuscated_code += junk_code
-        else:
-            if not singleComment and not multipleComment:
+            if singleComment:
+                if char == '\n':
+                    singleComment = False
+            elif multipleComment:
+                if char == '"' and line[j:j+3] == '"""':
+                    multipleComment = False
+                    j += 2 
+                elif char == "'" and line[j:j+3] == "'''":
+                    multipleComment = False
+                    j += 2 
+            elif char == '#':
+                singleComment = True
+            elif char == '"' and line[j:j+3] == '"""':
+                multipleComment = True
+                j += 2 
+            elif char == "'" and line[j:j+3] == "'''":
+                multipleComment = True
+                j += 2
+            elif char == '\n':
                 obfuscated_code += char
+                if not singleComment and not multipleComment:
+                    if random.random() < 0.2:  
+                        junk_code = junkgenerator(random.randint(10, 30), whitespaces[i])
+                        obfuscated_code += junk_code
+            else:
+                if not singleComment and not multipleComment:
+                    obfuscated_code += char
 
-        i += 1
+            j += 1
+        
+        obfuscated_code += "\n"
 
-    if random.random() < 0.5:  
-        obfuscated_code += junkgenerator(random.randint(10, 30), current_indent)
-
-    return obfuscated_code
+    return junkmachine(obfuscated_code)
 
 def main():
     if len(sys.argv) != 2:
@@ -85,8 +160,7 @@ def main():
         sys.exit(1)
 
     with open(fileName, "r") as file:
-        code = file.read()
-        obfuscatedCode = obfuscate(code)
+        obfuscatedCode = obfuscate(file)
         obfuscatedFileName = "obfuscated" + fileName
         with open(obfuscatedFileName, "w") as newFile:
             newFile.write(obfuscatedCode)

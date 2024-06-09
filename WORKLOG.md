@@ -75,6 +75,13 @@
 ### 6/6/24
 
 - Finished Trash Code Insertion, so new file doesn't throw any indentation error. 
+- Added to PRESENTATION.md
+
+### 6/7/24
+
+- Trash code indentation is actually fixed now. Before, it worked sometimes. 
+- Made trash code more complicated with while and for loops. 
+- Made it so that `while`, `if`, and `operation` only use existing variables. 
 
 ## Eric Wu
 
