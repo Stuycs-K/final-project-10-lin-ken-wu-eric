@@ -3,16 +3,16 @@ public class test {
     public static void main(String[] args) {
         // Test File
 
-        System.out.println("Eric is a Bozo");
+        System.out.println("TESTTEST");
 
-        /* Eric
-            Plays
-                Clash 
-                    Of 
-                        Clans */
+        /* WEEEEE
+            OOOOOO
+                AAAAAAAAAAA 
+                    hi 
+                        there */
 
         for (int i = 0; i < 5; i++) {
-            System.out.println("Eric is trolling me. ");
+            System.out.println("TESTTESTTEST. ");
         }
     }
 }
