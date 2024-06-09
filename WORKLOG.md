@@ -155,4 +155,5 @@
 
 ### 6/9/24
 
-- Filming and editting
+- Fixed minor errors in presentation
+- Filming and editing video
