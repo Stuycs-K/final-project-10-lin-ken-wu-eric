@@ -124,11 +124,11 @@ Our Python program allows you to obfuscate a python file by docstring and commen
 
 Docstring and comment stripping makes code less readable. This is because these features provide insight into the purpose and logic of the code. Without these, it would make it harder for hackers to deciper what you are trying to achieve. 
 
-Trash code insertion basically just adds a lot of random code that is literally gibberish to make the code more meaningless. They are in the form of assignment and operation. We are just assignment variable of random letters mashed together with a number or two. 
+Trash code insertion basically just adds a lot of random code that is literally gibberish to make the code more meaningless. They are in the form of assignment and operation, along with if and while statements. 
 
-Operation just uses a variable, pre-existing or not, and performing one of the four basic operations. The trash code is unrelated to the rest of the program and shouldn't hinder the functionality. 
+The trash code is unrelated to the rest of the program and shouldn't hinder the functionality. 
 
-##### Java Change Names to Base64 + Comment Stripping + Removing whitespaces
+##### Java Change Names to Base64 + Comment Stripping + Removing whitespaces + Trash code insertion 
 
 Our Java program allows you to obfuscate a Java file by removing newlines/whitespaces, removes comments, and renames a lot of things.
 
