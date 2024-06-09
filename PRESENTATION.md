@@ -46,7 +46,7 @@ Comments are also a good way to debug your code and for future use. It would tak
 
 - String Extraction and Decoding
 
-You can extract all the strings from the file and decode it in any cipher. Each string can be encoded using different ciphers to increase the complexity. In addition, you can add multiple layers to this process. A common encryption algorithm is base64, or you can use more complex ones such as RSA. 
+You can extract all the strings from the file and encode it in any cipher. Each string can be encoded using different ciphers to increase the complexity. In addition, you can add multiple layers to this process. A common encryption algorithm is base64, or you can use more complex ones such as RSA. 
 
 This process can be somewhat reversed, but it would involved time. It would involve having the key generated or retrieved during runtime which makes static analysis more challenging.
 
@@ -86,8 +86,6 @@ public class Pol {
 }
 ```
 
-The only problem here is that this file extends from another file, so all files would have to be obfuscated. Also, the strings were turned into base64 to throw off the hackers. 
-
 Next, let's remove all the whitespaces from this Java file.
 ```java
 public class Pol { public static void main(String a[]) {System.out.println(b(4));} public static int b(int i) {if (i == 0){return 0;} else return b(i - 1) + 2;}}
@@ -126,11 +124,11 @@ Our Python program allows you to obfuscate a python file by docstring and commen
 
 Docstring and comment stripping makes code less readable. This is because these features provide insight into the purpose and logic of the code. Without these, it would make it harder for hackers to deciper what you are trying to achieve. 
 
-Trash code insertion basically just adds a lot of random code that is literally gibberish to make the code more meaningless. They are in the form of assignment and operation. We are just assignment variable of random letters mashed together with a number or two. 
+Trash code insertion basically just adds a lot of random code that is literally gibberish to make the code more meaningless. They are in the form of assignment and operation, along with if and while statements. 
 
-Operation just uses a variable, pre-existing or not, and performing one of the four basic operations. The trash code is unrelated to the rest of the program and shouldn't hinder the functionality. 
+The trash code is unrelated to the rest of the program and shouldn't hinder the functionality. 
 
-##### Java Change Names to Base64 + Comment Stripping + Removing whitespaces
+##### Java Change Names to Base64 + Comment Stripping + Removing whitespaces + Trash code insertion 
 
 Our Java program allows you to obfuscate a Java file by removing newlines/whitespaces, removes comments, and renames a lot of things.
 

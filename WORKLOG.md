@@ -83,6 +83,11 @@
 - Made trash code more complicated with while and for loops. 
 - Made it so that `while`, `if`, and `operation` only use existing variables. 
 
+### 6/9/24
+
+- Updated README
+- Filming
+
 ## Eric Wu
 
 ### 5/22/24
@@ -145,5 +150,10 @@
 
 ### 6/7/24
 
--Added make clean
--Changed more presentation
+- Added make clean
+- Changed more presentation
+
+### 6/9/24
+
+- Fixed minor errors in presentation
+- Filming and editing video
