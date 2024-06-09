@@ -135,3 +135,8 @@
 ### 6/6/24
 
 - Fixed java obfuscation code finally
+
+### 6/7/24
+
+-Added make clean
+-Changed more presentation
