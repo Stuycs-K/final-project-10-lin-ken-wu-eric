@@ -46,7 +46,7 @@ Comments are also a good way to debug your code and for future use. It would tak
 
 - String Extraction and Decoding
 
-You can extract all the strings from the file and decode it in any cipher. Each string can be encoded using different ciphers to increase the complexity. In addition, you can add multiple layers to this process. A common encryption algorithm is base64, or you can use more complex ones such as RSA. 
+You can extract all the strings from the file and encode it in any cipher. Each string can be encoded using different ciphers to increase the complexity. In addition, you can add multiple layers to this process. A common encryption algorithm is base64, or you can use more complex ones such as RSA. 
 
 This process can be somewhat reversed, but it would involved time. It would involve having the key generated or retrieved during runtime which makes static analysis more challenging.
 
