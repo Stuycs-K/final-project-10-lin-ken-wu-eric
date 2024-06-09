@@ -73,21 +73,39 @@ public class Obfuscate{
         Matcher match = varFinder.matcher(str);
         while (match.find()){
             String keyWord = match.group(1);
-            String encoded = Base64.getEncoder().encodeToString(keyWord.getBytes()).replace("==","");
+            String encoded = Base64.getEncoder().encodeToString(keyWord.getBytes()).replace("=","");
             newStr += str.substring(curIn,match.start());
             newStr += encoded;
             curIn = match.end();
         }
         newStr += str.substring(curIn);
         
-        String trashCode = "int asdfeaw = 0; for (int i = 0; i < 100; i++){int j = 0;}";
+        Random randNum = new Random();
+        int trashCodeNum = randNum.nextInt(10) + 1;
+        String junkCode = "";
+        for (int i = 0; i < trashCodeNum; i++){
+            junkCode += "int ";
+            junkCode += randString(randNum);
+            junkCode +=  "= ";
+            junkCode += randNum.nextInt(100);
+            junkCode += "; for (int i = 0; i < 100; i++){int j = 0;}";
+        }
 
-        Pattern keyFinder = Pattern.compile("\\b(public static)\\b");
+        Pattern keyFinder = Pattern.compile("\\b(main)\\b");
         Matcher keyMatch = keyFinder.matcher(str);
         while (keyMatch.find()){
-            newStr += obfuscate(trashCode);
+            newStr += obfuscate(junkCode);
         }
         return newStr;
+    }
+
+    public static String randString(Random rand){
+        String str = "";
+        String letters = "abcdefghiASFDLSAJjklmnopqrstuvwxyzZIEWQORJFSDKLFNZVXALFHQOAJ";
+        for (int i = 0; i < 8; i ++){
+            str += letters.charAt(rand.nextInt(letters.length()));
+        }
+        return str;
     }
 
 }
